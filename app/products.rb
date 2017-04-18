@@ -1,7 +1,9 @@
 require_relative 'core'
-ROOT = ''
+ROOT = '../'
+_IN = ROOT + 'haml/app.html.haml'
+_OUT = ROOT + 'release/html'
 class Product < HTML
-  def initialize(in_path, out_path)
-    super(ROOT + in_path, ROOT + out_path)
+  def initialize(_i, _o)
+    super(_i, _o)
   end
 end
