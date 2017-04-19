@@ -6,7 +6,7 @@
   %link{href: '../css/app.css', rel: 'stylesheet'}
 %body
   %main
-    %section
+    %section.suite_info
       - @combo.each do | header, value |
         %div.suite_info_container
           %div.suite_title_wraper
@@ -18,3 +18,10 @@
               - for _c in value["content"]
                 %li
                   = _c
+    %section.note_info
+      - @notes.each do |header, value|
+        %div.info_wrap
+          %p
+            %strong
+              = value["name"]
+            = value["content"]
