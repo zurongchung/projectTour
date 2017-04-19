@@ -51,9 +51,17 @@
 
 /**  notes */
 .note_info {
-  padding-left: 0 26px;
-  font-size: 0.875em; }
-  .note_info > div {
+  padding-left: 30px;
+  font-size: 0.875em;
+  position: relative; }
+  .note_info div.info_icon {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: url("../assets/Info-48.png") center/80% no-repeat;
+    left: 0;
+    top: 0; }
+  .note_info > div:not(.info_icon) {
     height: 26px;
     line-height: 26px;
     border-radius: 4px;
@@ -77,5 +85,8 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0; }
+
+p {
+  margin: 4px; }
 
 /*# sourceMappingURL=app.css.map */

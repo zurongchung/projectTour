@@ -51,9 +51,17 @@
       font-size: .875em
 /**  notes */
 .note_info
-  padding-left: 0 26px
+  padding-left: 30px
   font-size: .875em
-  & > div
+  position: relative
+  div.info_icon
+    position: absolute
+    width: 30px
+    height: 30px
+    background: url("../assets/Info-48.png") center/80% no-repeat
+    left: 0
+    top: 0
+  & > div:not(.info_icon)
     height: 26px
     line-height: 26px
     border-radius: 4px
