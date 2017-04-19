@@ -1,0 +1,20 @@
+!!!5
+%head{lang: "zh"}
+  %meta{charset: "utf8"}
+  %title test
+  %link{href: '../css/reset.css', rel: 'stylesheet'}
+  %link{href: '../css/app.css', rel: 'stylesheet'}
+%body
+  %main
+    %section
+      - @combo.each do | header, value |
+        %div.suite_info_container
+          %div.suite_title_wraper
+            %div.suite_icon
+            %h3.suite_title
+              = value["name"]
+          %div.suite_contents
+            %ul
+              - for _c in value["content"]
+                %li
+                  = _c
