@@ -1,52 +1,60 @@
 // self tour page style
 $outter-width: 1024px
-$min-gap: 2px
+$min-gap: 5px
 div.outter_container
   width: $outter-width
   height: 100%
-  margin: 0 auto
-  +row()
-  +FF-center-sb()
+  margin: 0
 div.products
   margin: 0 auto
-  +row()
-  +FF-center-sb
+  position: relative
+  & > div.product_card
+    $rows: 2
+    $row-end: 2
+    $col-break: 4
+    $col-end: 4
+    $start: 1
+    @for $r from 1 through $rows
+      $col: 1
+      @for $ii from $start through $col-end
+        @if $ii == $col-end
+          $start: $col-end + 1
+          $col-end: $col-end * 2
+        &:nth-child(#{$ii})
+          top: ($r - 1) * ($self-height + $min-gap)
+          left: ($col - 1) * ($self-width + $min-gap)
+          $col: $col + 1
+
+
 div.product_card
   width: $self-width
   height: $self-height
   border: 1px solid #efefef
-  flex: 0 0 auto
-  margin-bottom: 5px
+  position: absolute
   & > div.border_space
     height: 94%
     margin: $gap
-    +column()
-    +FF-center-sb()
     & > div
       width: 100%
       &.img_wrap
-        flex: 4 0 auto
+        height: 60%
       &.description_wrap
-        flex: 1 0 auto
+        height: 28%
         border-top: 1px solid #eaeaea
+        h3.desc_title
+          margin: $gap 0
       &.bottom_wrap
-        flex: 0 0 auto
         height: 40px
         & > div.price_wrap
           width: 60px
           height: 20px
+          margin-top: $gap
           color: #71c359
           text-align: center
           line-height: 20px
           border: 1px solid #eaeaea
-
-      $start: 1
-      $end: 3
-      @for $ii from $start through $end
-        &:nth-child(#{$ii})
-          @if $ii < 3
-            +column()
-            +FF-start-sa()
-          @else
-            +row()
-            +FF-center-sb()
+        & > div.more_button_wrap
+          float: right
+          margin-top: 2px
+        & > div
+          display: inline-block

@@ -2,8 +2,8 @@
   %div.page_path
     %p 首页 > 自由行
   %div.products
-    - @self_tour_data["products"].each do |data|
-      %div.product_card
+    - @self_tour_data["products"].each_with_index do |data, index|
+      %div{class: "product_card card_#{index}"}
         %div.border_space
           %div.img_wrap
             %img.product_cover{src: ""}
