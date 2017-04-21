@@ -2,18 +2,19 @@
   %div.page_path
     %p 首页 > 自由行
   %div.products
-    %div.product_card
-      %div.border_space
-        %div.img_wrap
-          %img.product_cover{src: ""}
-        %div.description_wrap
-          %h3.desc_title
-            = @self_tour_data["title"]
-          %p.desc_content
-            = @self_tour_data["desc"]
-        %div.bottom_wrap
-          %div.price_wrap
-            %p.price
-              = @self_tour_data["price"]
-          %div.more_button_wrap
-            %button.get_more_btn 了解更多
+    - @self_tour_data["products"].each do |data|
+      %div.product_card
+        %div.border_space
+          %div.img_wrap
+            %img.product_cover{src: ""}
+          %div.description_wrap
+            %h3.desc_title
+              = data["title"]
+            %p.desc_content
+              = data["desc"]
+          %div.bottom_wrap
+            %div.price_wrap
+              %p.price
+                = data["price"]
+            %div.more_button_wrap
+              %button.get_more_btn 了解更多
