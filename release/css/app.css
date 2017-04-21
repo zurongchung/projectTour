@@ -1,6 +1,7 @@
 div.outter_container {
-  width: 1028px;
+  width: 1024px;
   height: 100%;
+  margin: 0 auto;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -9,7 +10,7 @@ div.outter_container {
 div.products {
   margin: 0 auto;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: space-between; }
 
@@ -17,7 +18,8 @@ div.product_card {
   width: 249.5px;
   height: 320px;
   border: 1px solid #efefef;
-  flex: 0 0 auto; }
+  flex: 0 0 auto;
+  margin-bottom: 5px; }
   div.product_card > div.border_space {
     height: 94%;
     margin: 10px;

@@ -1,19 +1,22 @@
 // self tour page style
-$outter-width: 1028px
+$outter-width: 1024px
+$min-gap: 2px
 div.outter_container
   width: $outter-width
   height: 100%
+  margin: 0 auto
   +row()
   +FF-center-sb()
 div.products
   margin: 0 auto
-  +column()
+  +row()
   +FF-center-sb
 div.product_card
   width: $self-width
   height: $self-height
   border: 1px solid #efefef
   flex: 0 0 auto
+  margin-bottom: 5px
   & > div.border_space
     height: 94%
     margin: $gap
