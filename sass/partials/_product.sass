@@ -1,68 +1,49 @@
-.suite_info
-  display: flex
-  flex-flow: row wrap
-  font:
-    family: "source han"
-  @for $ii from 1 through 5
-    & > div:nth-child(#{$ii})
-      @if $ii == 2
-        border-left: 1px solid #6e6f73
-        border-right: 1px solid #6e6f73
-      @else if $ii == 4
-        border-right: 1px solid #6e6f73
-
-.suite_info_container
-  width: $cardv-4
-  height: $cardw
-  flex: 1 0 auto
-.suite_title_wraper
-  width: 100%
-  height: 80px
-  margin-bottom: $gap
-  align-items: center
-  justify-content: space-between
-  display: flex
-  flex-flow: column wrap
-
-.suite_icon
+// self tour page style
+$outter-width: 1028px
+div.outter_container
+  width: $outter-width
+  height: 100%
+  +row()
+  +FF-center-sb()
+div.products
+  margin: 0 auto
+  +column()
+  +FF-center-sb
+div.product_card
+  width: $self-width
+  height: $self-height
+  border: 1px solid #efefef
   flex: 0 0 auto
-  width: $icon-size
-  height: $icon-size
-.suite_title
-  flex: 0 0 auto
+  & > div.border_space
+    height: 94%
+    margin: $gap
+    +column()
+    +FF-center-sb()
+    & > div
+      width: 100%
+      &.img_wrap
+        flex: 4 0 auto
+      &.description_wrap
+        flex: 1 0 auto
+        border-top: 1px solid #eaeaea
+      &.bottom_wrap
+        flex: 0 0 auto
+        height: 40px
+        & > div.price_wrap
+          width: 60px
+          height: 20px
+          color: #71c359
+          text-align: center
+          line-height: 20px
+          border: 1px solid #eaeaea
 
-.suite_contents
-  width: 100%
-  height: auto
-  & > ul
-    width: 100%
-    height: 100%
-    display: flex
-    flex-flow: column wrap
-    align-items: center
-    justify-content: center
-    li
-      flex: 1 0 auto
-      width: auto
-      height: auto
-      margin-bottom: $gap
-      letter-spacing: 1px
-      word-spacing: 1px
-      font-size: .875em
-/**  notes */
-.note_info
-  padding-left: 30px
-  font-size: .875em
-  position: relative
-  div.info_icon
-    position: absolute
-    width: 30px
-    height: 30px
-    background: url("../assets/Info-48.png") center/80% no-repeat
-    left: 0
-    top: 0
-  & > div:not(.info_icon)
-    height: 26px
-    line-height: 26px
-    border-radius: 4px
-    background: #a4e0ff
+      $start: 1
+      $end: 3
+      @for $ii from $start through $end
+        &:nth-child(#{$ii})
+          @if $ii < 3
+            +column()
+            +FF-start-sa()
+          @else
+            +row()
+            +FF-center-sb()

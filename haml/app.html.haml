@@ -5,24 +5,4 @@
   %link{href: '../css/reset.css', rel: 'stylesheet'}
   %link{href: '../css/app.css', rel: 'stylesheet'}
 %body
-  %main
-    %section.suite_info
-      - @combo.each do | header, value |
-        %div.suite_info_container
-          %div.suite_title_wraper
-            %div.suite_icon
-            %h3.suite_title
-              = value["name"]
-          %div.suite_contents
-            %ul
-              - for _c in value["content"]
-                %li
-                  = _c
-    %section.note_info
-      %div.info_icon
-      - @notes.each do |header, value|
-        %div.info_wrap
-          %p
-            %strong
-              = value["name"]
-            = value["content"]
+  = add_fragment @selfTour
