@@ -1,0 +1,10 @@
+-#assets data variables
+- logo = @data["assets"]["logo"]
+%header
+  %div{id: "#{@corpName}logo-container"}
+    %img{src: logo["url"], width: logo["size"]["w"], height: logo["size"]["h"]}
+  %div{id: "#{@corpName}g-nav-container"}
+    %ul
+      - @data["nav"]["rootMenu"].each_with_index do |item, index|
+        %li{class: "#{@corpName}g-nav-menu #{@corpName}g-nav-menu-item-#{index}"}
+          = item
