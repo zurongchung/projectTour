@@ -1,10 +1,46 @@
 -#assets data variables
 - logo = @data["assets"]["logo"]
+- imgBackgroundTypeA = @data["assets"]["imgBackgroundTypeA"]
+- imgText = @data["assets"]["imgText"]
 %header
-  %div{id: "#{@corpName}logo-container"}
-    %img{src: logo["url"], width: logo["size"]["w"], height: logo["size"]["h"]}
-  %div{id: "#{@corpName}g-nav-container"}
-    %ul
-      - @data["nav"]["rootMenu"].each_with_index do |item, index|
-        %li{class: "#{@corpName}g-nav-menu #{@corpName}g-nav-menu-item-#{index}"}
-          = item
+  %div{id: "#{@corpName}header-child-wrapper"}
+    %div{id: "#{@corpName}logo-container"}
+      %img{src: logo["url"], width: logo["size"]["w"], height: logo["size"]["h"]}
+    %div{id: "#{@corpName}g-nav-container"}
+      %ul
+        - @data["nav"]["rootMenu"].each_with_index do |item, index|
+          %li{class: "#{@corpName}g-nav-menu #{@corpName}g-nav-menu-item-#{index}"}
+            = item
+-#splash A
+%div{id: "#{@corpName}main-contents-container"}
+  - 3.times do |index|
+    %section{class: "#{@corpName}splash #{@corpName}splash-#{index}"}
+      - if index == 0
+        %div{class: "#{@corpName}whatIDo-container"}
+          %div
+            %em{class: "#{@corpName}emphasis-texts #{@corpName}focal-text-coloured"} Make Your
+            %span{class: "#{@corpName}sup-small-text"} 旅程更省
+          %div
+            %span 更
+            %img{class: "#{@corpName}focal-text-with-background", width: imgBackgroundTypeA["size"]["w"], height: imgBackgroundTypeA["size"]["h"], src: imgBackgroundTypeA["url"]}
+            %em{class: "#{@corpName}emphasis-texts #{@corpName}has-background"} 轻松
+          %div{class: "#{@corpName}under-line"}
+      - elsif index == 1
+        %div{id: "#{@corpName}search-title-container"}
+          %img{class: "#{@corpName}img-text", width: imgText["size"]["w"], height: imgText["size"]["h"], src: imgText['url']}
+          %span{class: "#{@corpName}search-title"} 想去欣赏世界美景了？
+          %span{class: "#{@corpName}search-title-en"} See what we've got for you!
+        %div{id: "#{@corpName}search-box-container"}
+          -# add search box here
+      - else
+        %div{class: "#{@corpName}product-intro-title"}
+          %div{class: "#{@corpName}product-intro-title-top"}
+            %em{class: "#{@corpName}focal-intro-title-text-coloured"} Your
+            %em{class: "#{@corpName}intro-title-text"} Trip
+            %span{class: "#{@corpName}-sub-small-text"} 可以更容易
+          %div{class: "#{@corpName}product-intro-title-below"}
+            %em{class: "#{@corpName}intro-title-text"} With
+            %em{class: "#{@corpName}focal-intro-title-text-coloured"} Our
+            %span{class: "#{@corpName}-intro-title-product-name"} 旅游卡
+        - 6.times do |index|
+          %div{class: "#{@corpName}product-intro info-#{index}"}

@@ -1,0 +1,93 @@
+/** COLOR */
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #6e6f73;
+  font-family: "source han"; }
+
+h3 {
+  margin: 0; }
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+p {
+  margin: 0;
+  line-height: 20px;
+  font-size: 0.875em; }
+
+button {
+  cursor: pointer; }
+
+div.outter_container {
+  width: 1024px;
+  height: 100%;
+  margin: 0; }
+
+div.products {
+  margin: 0 auto;
+  position: relative; }
+  div.products > div.product_card:nth-child(1) {
+    top: 0px;
+    left: 0px; }
+  div.products > div.product_card:nth-child(2) {
+    top: 0px;
+    left: 254.5px; }
+  div.products > div.product_card:nth-child(3) {
+    top: 0px;
+    left: 509px; }
+  div.products > div.product_card:nth-child(4) {
+    top: 0px;
+    left: 763.5px; }
+  div.products > div.product_card:nth-child(5) {
+    top: 325px;
+    left: 0px; }
+  div.products > div.product_card:nth-child(6) {
+    top: 325px;
+    left: 254.5px; }
+  div.products > div.product_card:nth-child(7) {
+    top: 325px;
+    left: 509px; }
+  div.products > div.product_card:nth-child(8) {
+    top: 325px;
+    left: 763.5px; }
+
+div.product_card {
+  width: 249.5px;
+  height: 320px;
+  border: 1px solid #efefef;
+  position: absolute; }
+  div.product_card > div.border_space {
+    height: 94%;
+    margin: 10px; }
+    div.product_card > div.border_space > div {
+      width: 100%; }
+      div.product_card > div.border_space > div.img_wrap {
+        height: 60%; }
+      div.product_card > div.border_space > div.description_wrap {
+        height: 28%;
+        border-top: 1px solid #eaeaea; }
+        div.product_card > div.border_space > div.description_wrap h3.desc_title {
+          margin: 10px 0; }
+      div.product_card > div.border_space > div.bottom_wrap {
+        height: 40px; }
+        div.product_card > div.border_space > div.bottom_wrap > div.price_wrap {
+          width: 60px;
+          height: 20px;
+          margin-top: 10px;
+          color: #71c359;
+          text-align: center;
+          line-height: 20px;
+          border: 1px solid #eaeaea; }
+        div.product_card > div.border_space > div.bottom_wrap > div.more_button_wrap {
+          float: right;
+          margin-top: 2px; }
+        div.product_card > div.border_space > div.bottom_wrap > div {
+          display: inline-block; }
+
+/*# sourceMappingURL=product.css.map */

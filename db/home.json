@@ -1,10 +1,24 @@
 {
   "assets": {
     "logo": {
-      "url": "../assets/home/logo.png",
+      "url": "https://img.alicdn.com/imgextra/i1/830133302/TB2KbxepbBnpuFjSZFGXXX51pXa_!!830133302.png",
       "size": {
         "w": 54,
         "h": 51
+      }
+    },
+    "imgText": {
+      "url": "https://img.alicdn.com/imgextra/i2/830133302/TB2t9JWphhmpuFjSZFyXXcLdFXa_!!830133302.png",
+      "size": {
+        "w": 151,
+        "h": 35
+      }
+    },
+    "imgBackgroundTypeA": {
+      "url": "https://img.alicdn.com/imgextra/i2/830133302/TB2gyOephlmpuFjSZPfXXc9iXXa_!!830133302.png",
+      "size": {
+        "w": 208,
+        "h": 88
       }
     }
   },
