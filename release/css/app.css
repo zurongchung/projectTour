@@ -6,7 +6,7 @@ body {
   margin: 0;
   padding: 0;
   color: #6e6f73;
-  font-family: "source han"; }
+  font-family: "Source Han Serif CN"; }
 
 h3 {
   margin: 0; }
@@ -51,7 +51,8 @@ header {
     line-height: 32px;
     margin: 0 10px;
     text-align: center;
-    cursor: pointer; }
+    cursor: pointer;
+    color: #707070; }
     #CYQC-g-nav-container > ul .CYQC-g-nav-menu:nth-child(4) {
       color: white;
       -webkit-border-radius: 4px;
@@ -70,7 +71,12 @@ header {
     height: 320px; }
   #CYQC-main-contents-container > .CYQC-splash-1 {
     width: 100%;
-    height: 200px; }
+    height: 270px; }
+  #CYQC-main-contents-container > .CYQC-splash-2 {
+    width: 100%;
+    height: auto;
+    border-top: 1px solid #ebebeb;
+    padding-top: 40px; }
 
 .CYQC-whatIDo-container {
   width: auto;
@@ -89,14 +95,16 @@ header {
       height: 4px;
       background: #4a979c;
       position: relative;
-      left: 124px; }
+      left: 165px; }
     .CYQC-whatIDo-container > div span {
-      font-size: 30px; }
+      font-size: 30px;
+      color: #707070; }
       .CYQC-whatIDo-container > div span.CYQC-sup-small-text {
         position: relative;
         top: -30px; }
     .CYQC-whatIDo-container > div .CYQC-emphasis-texts {
       font-style: normal;
+      font-weight: bold;
       font-size: 48px; }
       .CYQC-whatIDo-container > div .CYQC-emphasis-texts.CYQC-focal-text-coloured {
         color: #4a979c; }
@@ -124,12 +132,55 @@ header {
 #CYQC-search-title-container {
   width: auto;
   height: auto; }
-  #CYQC-search-title-container > span.CYQC-search-title {
-    font-size: 30px;
-    letter-spacing: 4px; }
-  #CYQC-search-title-container > span.CYQC-search-title-en {
+  #CYQC-search-title-container > span {
+    color: #707070; }
+    #CYQC-search-title-container > span.CYQC-search-title {
+      font-size: 30px;
+      letter-spacing: 4px; }
+    #CYQC-search-title-container > span.CYQC-search-title-en {
+      font-size: 24px;
+      letter-spacing: 1px;
+      word-spacing: 4px; }
+
+/** PRODUCT INTRO */
+#CYQC-product-intro-title-container {
+  width: auto;
+  height: 300px; }
+  #CYQC-product-intro-title-container div.CYQC-product-intro-title-top {
+    height: 40px; }
+  #CYQC-product-intro-title-container div.CYQC-product-intro-title-below {
+    margin-left: 40px; }
+  #CYQC-product-intro-title-container div.CYQC-product-intro-title-blow-position {
+    display: inline-block;
+    position: relative;
+    top: -110px; }
+  #CYQC-product-intro-title-container div > em {
+    font-style: normal;
     font-size: 24px;
-    letter-spacing: 1px;
-    word-spacing: 4px; }
+    margin-right: 5px;
+    letter-spacing: 2px; }
+    #CYQC-product-intro-title-container div > em.CYQC-intro-title-text {
+      color: #707070; }
+    #CYQC-product-intro-title-container div > em.CYQC-focal-intro-title-text-coloured {
+      color: #4a979c;
+      border-bottom: 4px solid #4a979c; }
+  #CYQC-product-intro-title-container div > span {
+    letter-spacing: 4px; }
+  #CYQC-product-intro-title-container div > .CYQC-sub-small-text {
+    font-size: 18px;
+    color: #707070; }
+  #CYQC-product-intro-title-container div > .CYQC-intro-title-product-name {
+    font-size: 60px;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    top: -88px;
+    left: -210px; }
+  #CYQC-product-intro-title-container div > .CYQC-intro-title-product-name-background {
+    /** background image's size */
+    width: 234px;
+    height: 150px;
+    position: relative;
+    left: 12px; }
 
 /*# sourceMappingURL=app.css.map */

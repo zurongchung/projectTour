@@ -1,6 +1,7 @@
 -#assets data variables
 - logo = @data["assets"]["logo"]
 - imgBackgroundTypeA = @data["assets"]["imgBackgroundTypeA"]
+- imgBackgroundTypeB = @data["assets"]["imgBackgroundTypeB"]
 - imgText = @data["assets"]["imgText"]
 %header
   %div{id: "#{@corpName}header-child-wrapper"}
@@ -33,14 +34,16 @@
         %div{id: "#{@corpName}search-box-container"}
           -# add search box here
       - else
-        %div{class: "#{@corpName}product-intro-title"}
+        %div{id: "#{@corpName}product-intro-title-container"}
           %div{class: "#{@corpName}product-intro-title-top"}
             %em{class: "#{@corpName}focal-intro-title-text-coloured"} Your
             %em{class: "#{@corpName}intro-title-text"} Trip
-            %span{class: "#{@corpName}-sub-small-text"} 可以更容易
+            %span{class: "#{@corpName}sub-small-text"} 可以更容易
           %div{class: "#{@corpName}product-intro-title-below"}
-            %em{class: "#{@corpName}intro-title-text"} With
-            %em{class: "#{@corpName}focal-intro-title-text-coloured"} Our
-            %span{class: "#{@corpName}-intro-title-product-name"} 旅游卡
+            %div{class: "#{@corpName}product-intro-title-blow-position"}
+              %em{class: "#{@corpName}intro-title-text"} With
+              %em{class: "#{@corpName}focal-intro-title-text-coloured"} Our
+            %img{class: "#{@corpName}intro-title-product-name-background", src: imgBackgroundTypeB["url"], width: imgBackgroundTypeB["size"]["w"], height: imgBackgroundTypeB["size"]["h"]}
+            %span{class: "#{@corpName}intro-title-product-name"} 旅游卡
         - 6.times do |index|
           %div{class: "#{@corpName}product-intro info-#{index}"}
