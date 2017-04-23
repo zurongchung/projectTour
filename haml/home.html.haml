@@ -3,6 +3,7 @@
 - imgBackgroundTypeA = @data["assets"]["imgBackgroundTypeA"]
 - imgBackgroundTypeB = @data["assets"]["imgBackgroundTypeB"]
 - imgText = @data["assets"]["imgText"]
+- productIntro = @data["productIntro"]
 %header
   %div{id: "#{@corpName}header-child-wrapper"}
     %div{id: "#{@corpName}logo-container"}
@@ -45,5 +46,17 @@
               %em{class: "#{@corpName}focal-intro-title-text-coloured"} Our
             %img{class: "#{@corpName}intro-title-product-name-background", src: imgBackgroundTypeB["url"], width: imgBackgroundTypeB["size"]["w"], height: imgBackgroundTypeB["size"]["h"]}
             %span{class: "#{@corpName}intro-title-product-name"} 旅游卡
-        - 6.times do |index|
-          %div{class: "#{@corpName}product-intro info-#{index}"}
+        - productIntro.each_with_index do |data, index|
+          -# data exchange to intro-text-info.html.haml file
+          - setData(data)
+          %div{class: "#{@corpName}product-intro-container info-container-#{index}"}
+            - if index % 2 != 0
+              %div{class: "#{@corpName}info-views-box"}
+                - data["graphics"].each_with_index do |graphic, index|
+                  %img{class: "#{@corpName}intro-graphic graphic-#{index}", width: graphic["size"]["w"], height: graphic["size"]["h"], src: graphic["url"]}
+              = add_fragment @homeIntroInfo
+            - else
+              = add_fragment @homeIntroInfo
+              %div{class: "#{@corpName}info-views-box"}
+                - data["graphics"].each_with_index do |graphic, index|
+                  %img{class: "#{@corpName}intro-graphic graphic-#{index}", width: graphic["size"]["w"], height: graphic["size"]["h"], src: graphic["url"]}

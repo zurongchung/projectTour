@@ -29,7 +29,7 @@ $menu-height: 30px
       display: inline-block
       width: $menu-width
       height: $menu-height
-      line-height: $menu-height + 2
+      line-height: $menu-height
       margin: 0 $gap
       text-align: center
       cursor: pointer
@@ -161,3 +161,72 @@ $menu-height: 30px
       height: 150px
       position: relative
       left: 12px
+/** PRODUCT INTRO */
+$intro-box-height: 450px
+/** 40px: is the indent of element .#{$corpName}-product-intro-title-below */
+/** Used to aligh texts within two elements */
+$intro-box-space: 40px
+.#{$corpName}-product-intro-container
+  width: 100%
+  height: $intro-box-height
+  //padding: 0 $intro-box-space
+  padding-top: $intro-box-space
+  &:nth-child(even)
+    & > .#{$corpName}-info-text-box
+      float: left
+  &:nth-child(odd)
+    & > .#{$corpName}-info-text-box
+      float: right
+  & > div
+    display: inline-block
+    width: 49.7%
+    height: auto
+    &:nth-child(even)
+      & > img, div
+        margin-left: 74px
+.#{$corpName}-info-text-box
+  .#{$corpName}-info-text-expendable
+    font-size: 16px
+    color: $text-gray
+  .#{$corpName}-info-indent-text
+    // standard indent space
+    //margin-left: $intro-box-space
+    display: block
+    width: 300px
+    letter-spacing: 2px
+  .#{$corpName}-info-text-colour
+    color: $primary
+    font-size: 18px
+  .#{$corpName}-info-emphasis
+    font:
+      style: normal
+      size: 24px
+      weight: 500
+    color: $text-dark
+    &.title-cn
+      letter-spacing: 2px
+  & > .#{$corpName}-info-text-content
+    margin-bottom: $gap
+    & > .#{$corpName}-info-title-divider
+      margin: 0 ($gap / 2)
+      display: inline-block
+      width: 1px
+      height: 28px
+      background: $text-dark
+    & > .#{$corpName}-startTrip-button
+      cursor: pointer
+      width: 127px
+      & > .#{$corpName}-startTrip-button-background
+        /** background image size*/
+        width: 127px
+        height: 37px
+      & > .#{$corpName}-text-on-button
+        color: white
+        letter-spacing: 2px
+        position: relative
+        left: 20px
+        top: -36px
+.#{$corpName}-info-views-box
+  & > .#{$corpName}-intro-graphic
+    width: 400px
+    height: 300px

@@ -27,9 +27,120 @@
         "w": 234,
         "h": 150
       }
+    },
+    "gradientBackground": {
+      "url": "../assets/home/gradient_button_background.png",
+      "size": {
+        "w": 127,
+        "h": 37
+      }
     }
   },
   "nav": {
     "rootMenu": ["自由行", "自驾游", "景点门票", "加入代理", "关于徜徉青春"]
-  }
+  },
+  "productIntro": [
+    {
+      "en": "Ticket",
+      "cn": "景点门票",
+      "expendable": "那个景点好受欢迎呀！ 风景肯定美美哒。咱们也去欣赏一番好伐？",
+      "yeild": "With Our Product and Services",
+      "benifit": "不管那个景点的门票多贵，我们早已为你准备好了一张门票。",
+      "textOnButton": "开始旅途 >",
+      "graphics": [
+        {
+          "url": "../assets/home/product/400x300.png",
+          "size": {
+            "w": 400,
+            "h": 300
+          }
+        }
+      ]
+    },
+    {
+      "en": "Hotel",
+      "cn": "4星级酒店",
+      "expendable": "哎呦.不知如何预约酒店咋办？星级酒店好贵呀！便宜的酒店又不舒适！",
+      "yeild": "With Our Product and Services",
+      "benifit": "维也纳同等级别的 4 星级酒店已经为你预约好,直接入住即可。",
+      "textOnButton": "开始旅途 >",
+      "graphics": [
+        {
+          "url": "../assets/home/product/400x300.png",
+          "size": {
+            "w": 400,
+            "h": 300
+          }
+        }
+      ]
+    },
+    {
+      "en": "Breakfast",
+      "cn": "早餐",
+      "expendable": "",
+      "yeild": "",
+      "benifit": "每天清晨酒店都会提供丰富多样的免费的自助早餐。",
+      "textOnButton": "开始旅途 >",
+      "graphics": [
+        {
+          "url": "../assets/home/product/400x300.png",
+          "size": {
+            "w": 400,
+            "h": 300
+          }
+        }
+      ]
+    },
+    {
+      "en": "Insurance",
+      "cn": "保险",
+      "expendable": "",
+      "yeild": "",
+      "benifit": "我们更注重旅程中你的安全，所以我们提供价值130万的保险。已经包含在套餐里无需另外缴费。",
+      "textOnButton": "开始旅途 >",
+      "graphics": [
+        {
+          "url": "../assets/home/product/400x300.png",
+          "size": {
+            "w": 400,
+            "h": 300
+          }
+        }
+      ]
+    },
+    {
+      "en": "Pick Up",
+      "cn": "专车接送",
+      "expendable": "已下飞机，该怎么去酒店呢？",
+      "yeild": "With Our Product and Services",
+      "benifit": "在你的到来，我们的当地的司机将会送你到酒店。<br/>当你想去观赏套餐包含的景点，司机将会送你到景点与接你回酒店。<br/>当你的旅途结束回程时，司机将会送你到当地机场、火车站、高铁站和汽车站。",
+      "textOnButton": "开始旅途 >",
+      "graphics": [
+        {
+          "url": "../assets/home/product/400x300.png",
+          "size": {
+            "w": 400,
+            "h": 300
+          }
+        }
+      ]
+    },
+    {
+      "en": "Personal Adviser",
+      "cn": "私人顾问",
+      "expendable": "想更多的了解当地风情、美食，询问陌生人又担心被骗。",
+      "yeild": "With Our Product and Services",
+      "benifit": "我们为你安排的当地的私人顾问，需要了解当地风情和美食，随时都可以询问私人顾问。<br/>最重要的是，无强制消费，一切均由你决定。",
+      "textOnButton": "开始旅途 >",
+      "graphics": [
+        {
+          "url": "../assets/home/product/400x300.png",
+          "size": {
+            "w": 400,
+            "h": 300
+          }
+        }
+      ]
+    }
+  ]
 }

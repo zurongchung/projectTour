@@ -48,7 +48,7 @@ header {
     display: inline-block;
     width: 100px;
     height: 30px;
-    line-height: 32px;
+    line-height: 30px;
     margin: 0 10px;
     text-align: center;
     cursor: pointer;
@@ -182,5 +182,66 @@ header {
     height: 150px;
     position: relative;
     left: 12px; }
+
+/** PRODUCT INTRO */
+/** 40px: is the indent of element .CYQC-product-intro-title-below */
+/** Used to aligh texts within two elements */
+.CYQC-product-intro-container {
+  width: 100%;
+  height: 450px;
+  padding-top: 40px; }
+  .CYQC-product-intro-container:nth-child(even) > .CYQC-info-text-box {
+    float: left; }
+  .CYQC-product-intro-container:nth-child(odd) > .CYQC-info-text-box {
+    float: right; }
+  .CYQC-product-intro-container > div {
+    display: inline-block;
+    width: 49.7%;
+    height: auto; }
+    .CYQC-product-intro-container > div:nth-child(even) > img, .CYQC-product-intro-container > div:nth-child(even) div {
+      margin-left: 74px; }
+
+.CYQC-info-text-box .CYQC-info-text-expendable {
+  font-size: 16px;
+  color: #707070; }
+.CYQC-info-text-box .CYQC-info-indent-text {
+  display: block;
+  width: 300px;
+  letter-spacing: 2px; }
+.CYQC-info-text-box .CYQC-info-text-colour {
+  color: #4a979c;
+  font-size: 18px; }
+.CYQC-info-text-box .CYQC-info-emphasis {
+  font-style: normal;
+  font-size: 24px;
+  font-weight: 500;
+  color: #555555; }
+  .CYQC-info-text-box .CYQC-info-emphasis.title-cn {
+    letter-spacing: 2px; }
+.CYQC-info-text-box > .CYQC-info-text-content {
+  margin-bottom: 10px; }
+  .CYQC-info-text-box > .CYQC-info-text-content > .CYQC-info-title-divider {
+    margin: 0 5px;
+    display: inline-block;
+    width: 1px;
+    height: 28px;
+    background: #555555; }
+  .CYQC-info-text-box > .CYQC-info-text-content > .CYQC-startTrip-button {
+    cursor: pointer;
+    width: 127px; }
+    .CYQC-info-text-box > .CYQC-info-text-content > .CYQC-startTrip-button > .CYQC-startTrip-button-background {
+      /** background image size */
+      width: 127px;
+      height: 37px; }
+    .CYQC-info-text-box > .CYQC-info-text-content > .CYQC-startTrip-button > .CYQC-text-on-button {
+      color: white;
+      letter-spacing: 2px;
+      position: relative;
+      left: 20px;
+      top: -36px; }
+
+.CYQC-info-views-box > .CYQC-intro-graphic {
+  width: 400px;
+  height: 300px; }
 
 /*# sourceMappingURL=app.css.map */

@@ -1,0 +1,24 @@
+- gradientBackground = @data["assets"]["gradientBackground"]
+- data = getData
+%div{class: "#{@corpName}info-text-box"}
+  - 5.times do |index|
+    - if index == 0
+      %div{class: "#{@corpName}info-text-content"}
+        %em{class: "#{@corpName}info-title, #{@corpName}info-emphasis title-en"}= data["en"]
+        %i{class: "#{@corpName}info-title-divider"}
+        %em{class: "#{@corpName}info-title, #{@corpName}info-emphasis title-cn"}= data["cn"]
+    - elsif index == 1 && data.has_key?("expendable") && !data["expendable"].empty?
+      -# if [expendable] content isn't provide then ingore it
+      %div{class: "#{@corpName}info-text-content"}
+        %span{class: "#{@corpName}info-text-expendable #{@corpName}info-indent-text"}= data["expendable"]
+    - elsif index == 2 && data.has_key?("yeild") && !data["yeild"].empty?
+      %div{class: "#{@corpName}info-text-content"}
+        %em{class: "#{@corpName}info-emphasis"}= data["yeild"]
+    - elsif index == 3
+      %div{class: "#{@corpName}info-text-content"}
+        %span{class: "#{@corpName}info-text-colour #{@corpName}info-indent-text #{@corpName}info-benifit"}= data["benifit"]
+    -elsif index == 4
+      %div{class: "#{@corpName}info-text-content"}
+        %div{class: "#{@corpName}startTrip-button"}
+          %img{class: "#{@corpName}startTrip-button-background", src: gradientBackground["url"], width: gradientBackground["w"], height: gradientBackground["h"]}
+          %span{class: "#{@corpName}text-on-button"}= data["textOnButton"]
