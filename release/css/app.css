@@ -1,4 +1,10 @@
 /** COLOR */
+.CYQC-info-text-box > .CYQC-info-text-content > .CYQC-info-title-divider, .CYQC-footer-trip-suggestion > .CYQC-footer-suggestion-position > .CYQC-suggestion-title-container > .CYQC-title-divider {
+  margin: 0 5px;
+  display: inline-block;
+  width: 1px;
+  background: #555555; }
+
 * {
   box-sizing: border-box; }
 
@@ -26,12 +32,6 @@ p {
 
 button {
   cursor: pointer; }
-
-.CYQC-info-text-box > .CYQC-info-text-content > .CYQC-info-title-divider, .CYQC-footer-trip-suggestion > .CYQC-footer-suggestion-position > .CYQC-suggestion-title-container > .CYQC-title-divider {
-  margin: 0 5px;
-  display: inline-block;
-  width: 1px;
-  background: #555555; }
 
 /** HEADER */
 header {

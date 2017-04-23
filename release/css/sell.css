@@ -1,0 +1,110 @@
+/** COLOR */
+.CYQC-sell-title-wrap .CYQC-title-divider {
+  margin: 0 5px;
+  display: inline-block;
+  width: 1px;
+  background: #555555; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #6e6f73;
+  font-family: "Source Han Serif CN"; }
+
+a {
+  text-decoration: none; }
+
+h3 {
+  margin: 0; }
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+p {
+  margin: 0;
+  line-height: 20px;
+  font-size: 0.875em; }
+
+button {
+  cursor: pointer; }
+
+.CYQC-sell-outter-wrap {
+  width: 950px;
+  margin: 0 auto;
+  height: 100%; }
+  .CYQC-sell-outter-wrap > div {
+    display: inline-block;
+    vertical-align: top; }
+
+.CYQC-sell-aside-container {
+  width: 197px;
+  height: 400px; }
+
+/** BERFORE ARE DEV ONLY */
+.CYQC-sell-contents-container {
+  width: 748px;
+  height: auto; }
+  .CYQC-sell-contents-container > .CYQC-sell-header-container {
+    width: 100%;
+    height: 100px; }
+    .CYQC-sell-contents-container > .CYQC-sell-header-container > .CYQC-sell-header-background {
+      float: right; }
+    .CYQC-sell-contents-container > .CYQC-sell-header-container > .CYQC-sell-header-text-has-background {
+      float: right;
+      letter-spacing: 2px;
+      position: relative;
+      left: 90px;
+      color: white;
+      font-weight: 500;
+      font-size: 24px; }
+
+.CYQC-sell-bundle-info-container > div {
+  display: inline-block;
+  width: 49.7%;
+  height: 100%;
+  vertical-align: top;
+  padding: 0 40px; }
+.CYQC-sell-bundle-info-container > .CYQC-sell-bundle-Include-container {
+  border-right: 1px solid #ebebeb; }
+.CYQC-sell-bundle-info-container > .CYQC-sell-bundle-Exclude-container > .CYQC-sell-title-wrap {
+  margin-top: 40px; }
+
+.CYQC-sell-title-text-position {
+  position: relative;
+  top: -10px;
+  left: -70px;
+  display: inline-block; }
+
+.CYQC-sell-title-wrap {
+  margin-bottom: 20px; }
+  .CYQC-sell-title-wrap .CYQC-title-divider {
+    height: 20px; }
+  .CYQC-sell-title-wrap .CYQC-sell-title-text {
+    color: #555555;
+    letter-spacing: 2px;
+    font-size: 18px;
+    font-weight: 500; }
+
+.CYQC-sell-info-wrap {
+  width: 252px;
+  height: auto; }
+  .CYQC-sell-info-wrap > ul {
+    list-style: disc;
+    list-style-position: inside; }
+    .CYQC-sell-info-wrap > ul > li {
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      font-size: 16px; }
+    .CYQC-sell-info-wrap > ul > .CYQC-sell-Include-list {
+      color: #555555;
+      font-weight: 500; }
+    .CYQC-sell-info-wrap > ul > .CYQC-sell-Exclude-list {
+      color: #b7b7b7;
+      font-weight: lighter; }
+
+/*# sourceMappingURL=sell.css.map */

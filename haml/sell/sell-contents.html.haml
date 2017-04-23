@@ -1,0 +1,25 @@
+- data = @sellDB["info"]
+- graphics = @sellDB["assets"]
+- imgBackgroundTypeC = @sellDB["assets"]["imgBackgroundTypeC"]
+%div{class: "#{@corpName}sell-outter-wrap"}
+  %div{class: "#{@corpName}sell-aside-container"}
+  %div{class: "#{@corpName}sell-contents-container"}
+    %div{class: "#{@corpName}sell-header-container"}
+      %img{class: "#{@corpName}sell-header-background", src: imgBackgroundTypeC["url"], width: imgBackgroundTypeC["size"]["w"], height: imgBackgroundTypeC["size"]["h"]}
+      %span{class: "#{@corpName}sell-header-text-has-background"} 套餐
+    %div{class: "#{@corpName}sell-bundle-info-container"}
+      - data.each_with_index do |info, index|
+        %div{class: "#{@corpName}sell-bundle-#{info["en"]}-container"}
+          %div{class: "#{@corpName}sell-title-wrap"}
+            - titleHasBackground = ""
+            - if index == 0
+              - titleHasBackground = "#{@corpName}sell-title-text-position"
+              %img{class: "#{@corpName}sell-title-background", src: info["icon"]["url"], width: info["icon"]["size"]["w"], height: info["icon"]["size"]["h"]}
+            %div{class: "#{titleHasBackground}"}
+              %span{class: "#{@corpName}sell-title-text title-en"}= info["en"]
+              %i{class: "#{@corpName}title-divider"}
+              %span{class: "#{@corpName}sell-title-text title-cn"}= info["cn"]
+          %div{class: "#{@corpName}sell-info-wrap"}
+            %ul
+              - info["list"].each_with_index do |text, index|
+                %li{class: "#{@corpName}sell-#{info["en"]}-list"}= text

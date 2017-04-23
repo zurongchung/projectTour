@@ -1,0 +1,74 @@
+@import ../common
+$limit-small-width: 748px
+.#{$corpName}-sell-outter-wrap
+  width: $limit-width
+  margin: 0 auto
+  height: 100%
+  & > div
+    display: inline-block
+    vertical-align: top
+.#{$corpName}-sell-aside-container
+  width: 197px
+  height: 400px
+/** BERFORE ARE DEV ONLY */
+.#{$corpName}-sell-contents-container
+  width: $limit-small-width
+  height: auto
+  & > .#{$corpName}-sell-header-container
+    width: 100%
+    height: 100px
+    & > .#{$corpName}-sell-header-background
+      float: right
+    & > .#{$corpName}-sell-header-text-has-background
+      float: right
+      letter-spacing: 2px
+      position: relative
+      left: 90px
+      color: white
+      font:
+        weight: 500
+        size: 24px
+.#{$corpName}-sell-bundle-info-container
+  & > div
+    display: inline-block
+    width: 49.7%
+    height: 100%
+    vertical-align: top
+    padding: 0 40px
+  & > .#{$corpName}-sell-bundle-Include-container
+    border-right: $divider-thick solid $divider-color
+  & > .#{$corpName}-sell-bundle-Exclude-container
+    & > .#{$corpName}-sell-title-wrap
+      margin-top: 40px
+.#{$corpName}-sell-title-text-position
+  position: relative
+  top: -10px
+  left: -70px
+  display: inline-block
+.#{$corpName}-sell-title-wrap
+  margin-bottom: $gap * 2
+  .#{$corpName}-title-divider
+    @extend %title-divider
+    height: 20px
+  .#{$corpName}-sell-title-text
+    color: $text-dark
+    letter-spacing: 2px
+    font:
+      size: 18px
+      weight: 500
+.#{$corpName}-sell-info-wrap
+  width: 252px
+  height: auto
+  & > ul
+    list-style: disc
+    list-style-position: inside
+    & > li
+      letter-spacing: 2px
+      margin-bottom: $gap
+      font-size: 16px
+    & > .#{$corpName}-sell-Include-list
+      color: $text-dark
+      font-weight: 500
+    & > .#{$corpName}-sell-Exclude-list
+      color: $text-light-gray
+      font-weight: lighter
