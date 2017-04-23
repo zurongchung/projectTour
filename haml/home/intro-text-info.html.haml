@@ -10,13 +10,15 @@
     - elsif index == 1 && data.has_key?("expendable") && !data["expendable"].empty?
       -# if [expendable] content isn't provide then ingore it
       %div{class: "#{@corpName}info-text-content"}
-        %span{class: "#{@corpName}info-text-expendable #{@corpName}info-indent-text"}= data["expendable"]
+        - data["expendable"].each_with_index do |content, index|
+          %span{class: "#{@corpName}info-text-expendable #{@corpName}info-indent-text"}= content
     - elsif index == 2 && data.has_key?("yeild") && !data["yeild"].empty?
       %div{class: "#{@corpName}info-text-content"}
         %em{class: "#{@corpName}info-emphasis"}= data["yeild"]
     - elsif index == 3
       %div{class: "#{@corpName}info-text-content"}
-        %span{class: "#{@corpName}info-text-colour #{@corpName}info-indent-text #{@corpName}info-benifit"}= data["benifit"]
+        - data["benifit"].each_with_index do |content, index|
+          %span{class: "#{@corpName}info-text-colour #{@corpName}info-indent-text #{@corpName}info-benifit"}= content
     -elsif index == 4
       %div{class: "#{@corpName}info-text-content"}
         %div{class: "#{@corpName}startTrip-button"}

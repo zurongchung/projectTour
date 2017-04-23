@@ -203,14 +203,16 @@ header {
 
 .CYQC-info-text-box .CYQC-info-text-expendable {
   font-size: 16px;
-  color: #707070; }
+  color: #707070;
+  margin-bottom: 10px; }
 .CYQC-info-text-box .CYQC-info-indent-text {
   display: block;
   width: 300px;
   letter-spacing: 2px; }
 .CYQC-info-text-box .CYQC-info-text-colour {
   color: #4a979c;
-  font-size: 18px; }
+  font-size: 18px;
+  margin-bottom: 10px; }
 .CYQC-info-text-box .CYQC-info-emphasis {
   font-style: normal;
   font-size: 24px;
