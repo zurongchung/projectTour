@@ -1,0 +1,16 @@
+%div{id: "#{@corpName}footer"}
+  %section{class: "#{@corpName}footer-trip-suggestion"}
+  - @suggestions["suggestions"].each_with_index do |suggestionHash, index|
+    - suggestsClass = "#{@corpName}city-suggestion" if index == 0
+    - suggestsClass = "#{@corpName}scene-suggestion" if index == 1
+    %section{class: "#{suggestsClass} #{@corpName}footer-trip-suggestion #{@corpName}footer-nav"}
+      %div{class: "#{@corpName}footer-suggestion-position"}
+        %div{class: "#{@corpName}suggestion-title-container"}
+          %span{class: "#{@corpName}suggeststion-title title-en"}= suggestionHash["title"]["en"]
+          %i{class: "#{@corpName}title-divider"}
+          %span{class: "#{@corpName}suggeststion-title title-cn"}= suggestionHash["title"]["cn"]
+        %div{class: "#{@corpName}suggestions-list-container"}
+          - suggestionHash["list"].each_with_index do |item, index|
+            -# list split by comma(,) or whitespace(\s)
+            %a{class: "#{@corpName}suggestions-text-link", href: "#{item["url"]}", target: "_self"}= item["name"]
+            -#%span{class: "#{@corpName}suggestions-text"}

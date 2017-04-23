@@ -60,3 +60,4 @@
               %div{class: "#{@corpName}info-views-box"}
                 - data["graphics"].each_with_index do |graphic, index|
                   %img{class: "#{@corpName}intro-graphic graphic-#{index}", width: graphic["size"]["w"], height: graphic["size"]["h"], src: graphic["url"]}
+= add_fragment @footer

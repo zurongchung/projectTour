@@ -1,4 +1,9 @@
 @import common
+%title-divider
+  margin: 0 ($gap / 2)
+  display: inline-block
+  width: 1px
+  background: $text-dark
 /** HEADER */
 $full-screen-width: 1600px
 $limit-width: 950px
@@ -122,7 +127,7 @@ $menu-height: 30px
 /** PRODUCT INTRO */
 ##{$corpName}-product-intro-title-container
   width: auto
-  height: 300px
+  height: 400px
   & div
     &.#{$corpName}-product-intro-title-top
       height: 40px
@@ -162,36 +167,42 @@ $menu-height: 30px
       position: relative
       left: 12px
 /** PRODUCT INTRO */
-$intro-box-height: 450px
+$intro-box-height: 500px
 /** 40px: is the indent of element .#{$corpName}-product-intro-title-below */
 /** Used to aligh texts within two elements */
 $intro-box-space: 40px
 .#{$corpName}-product-intro-container
   width: 100%
   height: $intro-box-height
-  //padding: 0 $intro-box-space
-  padding-top: $intro-box-space
-  &:nth-child(even)
-    & > .#{$corpName}-info-text-box
-      float: left
-  &:nth-child(odd)
-    & > .#{$corpName}-info-text-box
-      float: right
+  &.info-container-4 > .#{$corpName}-info-text-box
+    position: relative
+    top: -80px
   & > div
     display: inline-block
     width: 49.7%
     height: auto
     &:nth-child(even)
-      & > img, div
+      & > img, & > div
         margin-left: 74px
 .#{$corpName}-info-text-box
+  vertical-align: top
+  .#{$corpName}-info-title-container
+    display: inline-block
+  .#{$corpName}-info-sign-icon-container
+    /** only one usage at the "pick up" section */
+    display: inline-block
+    position: relative
+    top: 70px
+    left: 30px
+    & > .#{$corpName}-info-sign-icon
+      width: 138px
+      height: 97px
   .#{$corpName}-info-text-expendable
     font-size: 16px
     color: $text-gray
     margin-bottom: $gap
   .#{$corpName}-info-indent-text
     // standard indent space
-    //margin-left: $intro-box-space
     display: block
     width: 300px
     letter-spacing: 2px
@@ -208,15 +219,11 @@ $intro-box-space: 40px
     &.title-cn
       letter-spacing: 2px
   & > .#{$corpName}-info-text-content
-    margin-bottom: $gap
+    margin-bottom: $gap * 2
     & > .#{$corpName}-info-title-divider
-      margin: 0 ($gap / 2)
-      display: inline-block
-      width: 1px
+      @extend %title-divider
       height: 28px
-      background: $text-dark
     & > .#{$corpName}-startTrip-button
-      cursor: pointer
       width: 127px
       & > .#{$corpName}-startTrip-button-background
         /** background image size*/
@@ -232,3 +239,41 @@ $intro-box-space: 40px
   & > .#{$corpName}-intro-graphic
     width: 400px
     height: 300px
+/** FOOTER */
+##{$corpName}-footer
+  width: $limit-width
+  height: 220px
+  margin: 0 auto
+  border-top: $divider-thick solid $divider-color
+  padding-top: $gap * 4
+.#{$corpName}-footer-trip-suggestion
+  width: 33%
+  height: 100%
+  display: inline-block
+  vertical-align: top
+  & > .#{$corpName}-footer-suggestion-position
+    width: 80%
+    height: 100%
+    & > .#{$corpName}-suggestion-title-container
+      margin-bottom: $gap
+      padding-left: $gap
+      & > .#{$corpName}-suggeststion-title
+        color: $text-dark
+        letter-spacing: 2px
+        font:
+          size: 18px
+          weight: 500
+      & > .#{$corpName}-title-divider
+        @extend %title-divider
+        height: 20px
+    & > .#{$corpName}-suggestions-list-container
+      border-left: $divider-thick solid $divider-color
+      padding-left: $gap
+      height: 100%
+      & > .#{$corpName}-suggestions-text-link
+        display: inline-block
+        color: $text-gray
+        min-width: 50px
+        margin-right: $gap
+        height: 35px
+        line-height: 35px

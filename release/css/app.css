@@ -8,6 +8,9 @@ body {
   color: #6e6f73;
   font-family: "Source Han Serif CN"; }
 
+a {
+  text-decoration: none; }
+
 h3 {
   margin: 0; }
 
@@ -23,6 +26,12 @@ p {
 
 button {
   cursor: pointer; }
+
+.CYQC-info-text-box > .CYQC-info-text-content > .CYQC-info-title-divider, .CYQC-footer-trip-suggestion > .CYQC-footer-suggestion-position > .CYQC-suggestion-title-container > .CYQC-title-divider {
+  margin: 0 5px;
+  display: inline-block;
+  width: 1px;
+  background: #555555; }
 
 /** HEADER */
 header {
@@ -145,7 +154,7 @@ header {
 /** PRODUCT INTRO */
 #CYQC-product-intro-title-container {
   width: auto;
-  height: 300px; }
+  height: 400px; }
   #CYQC-product-intro-title-container div.CYQC-product-intro-title-top {
     height: 40px; }
   #CYQC-product-intro-title-container div.CYQC-product-intro-title-below {
@@ -188,62 +197,106 @@ header {
 /** Used to aligh texts within two elements */
 .CYQC-product-intro-container {
   width: 100%;
-  height: 450px;
-  padding-top: 40px; }
-  .CYQC-product-intro-container:nth-child(even) > .CYQC-info-text-box {
-    float: left; }
-  .CYQC-product-intro-container:nth-child(odd) > .CYQC-info-text-box {
-    float: right; }
+  height: 500px; }
+  .CYQC-product-intro-container.info-container-4 > .CYQC-info-text-box {
+    position: relative;
+    top: -80px; }
   .CYQC-product-intro-container > div {
     display: inline-block;
     width: 49.7%;
     height: auto; }
-    .CYQC-product-intro-container > div:nth-child(even) > img, .CYQC-product-intro-container > div:nth-child(even) div {
+    .CYQC-product-intro-container > div:nth-child(even) > img, .CYQC-product-intro-container > div:nth-child(even) > div {
       margin-left: 74px; }
 
-.CYQC-info-text-box .CYQC-info-text-expendable {
-  font-size: 16px;
-  color: #707070;
-  margin-bottom: 10px; }
-.CYQC-info-text-box .CYQC-info-indent-text {
-  display: block;
-  width: 300px;
-  letter-spacing: 2px; }
-.CYQC-info-text-box .CYQC-info-text-colour {
-  color: #4a979c;
-  font-size: 18px;
-  margin-bottom: 10px; }
-.CYQC-info-text-box .CYQC-info-emphasis {
-  font-style: normal;
-  font-size: 24px;
-  font-weight: 500;
-  color: #555555; }
-  .CYQC-info-text-box .CYQC-info-emphasis.title-cn {
-    letter-spacing: 2px; }
-.CYQC-info-text-box > .CYQC-info-text-content {
-  margin-bottom: 10px; }
-  .CYQC-info-text-box > .CYQC-info-text-content > .CYQC-info-title-divider {
-    margin: 0 5px;
+.CYQC-info-text-box {
+  vertical-align: top; }
+  .CYQC-info-text-box .CYQC-info-title-container {
+    display: inline-block; }
+  .CYQC-info-text-box .CYQC-info-sign-icon-container {
+    /** only one usage at the "pick up" section */
     display: inline-block;
-    width: 1px;
-    height: 28px;
-    background: #555555; }
-  .CYQC-info-text-box > .CYQC-info-text-content > .CYQC-startTrip-button {
-    cursor: pointer;
-    width: 127px; }
-    .CYQC-info-text-box > .CYQC-info-text-content > .CYQC-startTrip-button > .CYQC-startTrip-button-background {
-      /** background image size */
-      width: 127px;
-      height: 37px; }
-    .CYQC-info-text-box > .CYQC-info-text-content > .CYQC-startTrip-button > .CYQC-text-on-button {
-      color: white;
-      letter-spacing: 2px;
-      position: relative;
-      left: 20px;
-      top: -36px; }
+    position: relative;
+    top: 70px;
+    left: 30px; }
+    .CYQC-info-text-box .CYQC-info-sign-icon-container > .CYQC-info-sign-icon {
+      width: 138px;
+      height: 97px; }
+  .CYQC-info-text-box .CYQC-info-text-expendable {
+    font-size: 16px;
+    color: #707070;
+    margin-bottom: 10px; }
+  .CYQC-info-text-box .CYQC-info-indent-text {
+    display: block;
+    width: 300px;
+    letter-spacing: 2px; }
+  .CYQC-info-text-box .CYQC-info-text-colour {
+    color: #4a979c;
+    font-size: 18px;
+    margin-bottom: 10px; }
+  .CYQC-info-text-box .CYQC-info-emphasis {
+    font-style: normal;
+    font-size: 24px;
+    font-weight: 500;
+    color: #555555; }
+    .CYQC-info-text-box .CYQC-info-emphasis.title-cn {
+      letter-spacing: 2px; }
+  .CYQC-info-text-box > .CYQC-info-text-content {
+    margin-bottom: 20px; }
+    .CYQC-info-text-box > .CYQC-info-text-content > .CYQC-info-title-divider {
+      height: 28px; }
+    .CYQC-info-text-box > .CYQC-info-text-content > .CYQC-startTrip-button {
+      width: 127px; }
+      .CYQC-info-text-box > .CYQC-info-text-content > .CYQC-startTrip-button > .CYQC-startTrip-button-background {
+        /** background image size */
+        width: 127px;
+        height: 37px; }
+      .CYQC-info-text-box > .CYQC-info-text-content > .CYQC-startTrip-button > .CYQC-text-on-button {
+        color: white;
+        letter-spacing: 2px;
+        position: relative;
+        left: 20px;
+        top: -36px; }
 
 .CYQC-info-views-box > .CYQC-intro-graphic {
   width: 400px;
   height: 300px; }
+
+/** FOOTER */
+#CYQC-footer {
+  width: 950px;
+  height: 220px;
+  margin: 0 auto;
+  border-top: 1px solid #ebebeb;
+  padding-top: 40px; }
+
+.CYQC-footer-trip-suggestion {
+  width: 33%;
+  height: 100%;
+  display: inline-block;
+  vertical-align: top; }
+  .CYQC-footer-trip-suggestion > .CYQC-footer-suggestion-position {
+    width: 80%;
+    height: 100%; }
+    .CYQC-footer-trip-suggestion > .CYQC-footer-suggestion-position > .CYQC-suggestion-title-container {
+      margin-bottom: 10px;
+      padding-left: 10px; }
+      .CYQC-footer-trip-suggestion > .CYQC-footer-suggestion-position > .CYQC-suggestion-title-container > .CYQC-suggeststion-title {
+        color: #555555;
+        letter-spacing: 2px;
+        font-size: 18px;
+        font-weight: 500; }
+      .CYQC-footer-trip-suggestion > .CYQC-footer-suggestion-position > .CYQC-suggestion-title-container > .CYQC-title-divider {
+        height: 20px; }
+    .CYQC-footer-trip-suggestion > .CYQC-footer-suggestion-position > .CYQC-suggestions-list-container {
+      border-left: 1px solid #ebebeb;
+      padding-left: 10px;
+      height: 100%; }
+      .CYQC-footer-trip-suggestion > .CYQC-footer-suggestion-position > .CYQC-suggestions-list-container > .CYQC-suggestions-text-link {
+        display: inline-block;
+        color: #707070;
+        min-width: 50px;
+        margin-right: 10px;
+        height: 35px;
+        line-height: 35px; }
 
 /*# sourceMappingURL=app.css.map */

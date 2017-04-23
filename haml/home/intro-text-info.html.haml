@@ -3,10 +3,13 @@
 %div{class: "#{@corpName}info-text-box"}
   - 5.times do |index|
     - if index == 0
-      %div{class: "#{@corpName}info-text-content"}
+      %div{class: "#{@corpName}info-text-content #{@corpName}info-title-container"}
         %em{class: "#{@corpName}info-title, #{@corpName}info-emphasis title-en"}= data["en"]
         %i{class: "#{@corpName}info-title-divider"}
         %em{class: "#{@corpName}info-title, #{@corpName}info-emphasis title-cn"}= data["cn"]
+      - if data.has_key?("icon")
+        %div{class: "#{@corpName}info-sign-icon-container"}
+          %img{class: "#{@corpName}info-sign-icon", src: data["icon"]["url"], width: data["icon"]["size"]["w"], height: data["icon"]["size"]["h"]}
     - elsif index == 1 && data.has_key?("expendable") && !data["expendable"].empty?
       -# if [expendable] content isn't provide then ingore it
       %div{class: "#{@corpName}info-text-content"}
@@ -23,4 +26,4 @@
       %div{class: "#{@corpName}info-text-content"}
         %div{class: "#{@corpName}startTrip-button"}
           %img{class: "#{@corpName}startTrip-button-background", src: gradientBackground["url"], width: gradientBackground["w"], height: gradientBackground["h"]}
-          %span{class: "#{@corpName}text-on-button"}= data["textOnButton"]
+          %a{class: "#{@corpName}text-on-button", href: "#", target: "_self"}= data["textOnButton"]
