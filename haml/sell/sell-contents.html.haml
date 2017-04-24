@@ -1,6 +1,7 @@
 -# coding: utf-8
 - data = @sellDB["info"]
 - knowIt = @sellDB["notices"]["knowIt"]
+- tips = @sellDB["notices"]["tips"]
 - graphics = @sellDB["assets"]
 - imgBackgroundTypeC = @sellDB["assets"]["imgBackgroundTypeC"]
 %div{class: "#{@corpName}sell-outter-wrap"}
@@ -28,7 +29,27 @@
                 %li{class: "#{@corpName}sell-#{info["en"]}-list"}= text
     %div{class: "#{@corpName}sell-notice-know-it-container"}
       %div{class: "#{@corpName}sell-notice-know-it-title-container"}
-        %span{class: "#{@corpName}sell-notice-title"}
-      %div{class: "#{@corpName}sell-notice-know-it-contents-container"}
-        %p{class: "#{@corpName}sell-notice-pragraph"}
-          %em{class: "#{@corpName}sell-notice-sub-title"}
+        %img{class: "#{@corpName}sell-know-it-title-background", src: knowIt["icon"]["url"], width: knowIt["icon"]["w"], height: knowIt["icon"]["h"]}
+        %div{class: "#{@corpName}sell-title-position"}
+          %span{class: "#{@corpName}sell-title title-en"}= knowIt["en"]
+          %i{class: "#{@corpName}title-divider"}
+          %span{class: "#{@corpName}sell-title title-cn"}= knowIt["cn"]
+      %div{class: "#{@corpName}sell-notice-position"}
+        %div{class: "#{@corpName}sell-notice-know-it-contents-container"}
+          - knowIt["contents"].each_with_index do |data, index|
+            %p{class: "#{@corpName}sell-notice-pragraph"}
+              %em{class: "#{@corpName}sell-notice-sub-title"}= data["title"]
+              = data["content"]
+    %div{class: "#{@corpName}sell-tips-container"}
+      %div{class: "#{@corpName}sell-notice-tips-title-container"}
+        %img{class: "#{@corpName}sell-tips-title-background", src: tips["icon"]["url"], width: tips["icon"]["w"], height: tips["icon"]["h"]}
+        %div{class: "#{@corpName}sell-title-position"}
+          %span{class: "#{@corpName}sell-title title-en"}= tips["en"]
+          %i{class: "#{@corpName}title-divider"}
+          %span{class: "#{@corpName}sell-title title-cn"}= tips["cn"]
+      %div{class: "#{@corpName}sell-notice-position"}
+        %div{class: "#{@corpName}sell-notice-tips-contents-container"}
+          %ul
+            - tips["contents"].each_with_index do |data, index|
+              %li{class: "#{@corpName}sell-notice-pragraph"}
+                = data

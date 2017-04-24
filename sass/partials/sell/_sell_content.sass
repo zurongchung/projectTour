@@ -13,7 +13,14 @@ $limit-small-width: 748px
 /** BERFORE ARE DEV ONLY */
 .#{$corpName}-sell-contents-container
   width: $limit-small-width
-  height: auto
+  height: 100%
+  border-left: $divider-thick solid $divider-color
+  border-right: $divider-thick solid $divider-color
+  ul
+    list-style: disc
+    list-style-position: inside
+  & > div
+    margin-bottom: $gap * 12
   & > .#{$corpName}-sell-header-container
     width: 100%
     height: 100px
@@ -60,8 +67,6 @@ $limit-small-width: 748px
   width: 252px
   height: auto
   & > ul
-    list-style: disc
-    list-style-position: inside
     & > li
       letter-spacing: 2px
       margin-bottom: $gap
@@ -72,3 +77,41 @@ $limit-small-width: 748px
     & > .#{$corpName}-sell-Exclude-list
       color: $text-light-gray
       font-weight: lighter
+/** COMMON TITLE */
+.#{$corpName}-sell-title-position
+  position: relative
+  top: -45px
+  left: 40px
+.#{$corpName}-title-divider
+  @extend %title-divider
+  height: 18px
+.#{$corpName}-sell-title
+  color: $text-dark
+  letter-spacing: 2px
+/** PARAGRAPH COMMON STYLE */
+.#{$corpName}-sell-notice-position
+  width: 100%
+  height: auto
+  padding: 0 40px
+.#{$corpName}-sell-notice-pragraph
+  color: $text-gray
+  margin-bottom: $gap * 2
+  line-height: 28px
+  letter-spacing: 2px
+  font:
+    size: 16px
+    weight: 100
+/** KNOW IT */
+.#{$corpName}-sell-notice-know-it-container
+  & > .#{$corpName}-sell-notice-know-it-title-container
+  .#{$corpName}-sell-notice-know-it-contents-container
+    & > .#{$corpName}-sell-notice-pragraph
+      & > .#{$corpName}-sell-notice-sub-title
+        color: $text-dark
+        margin-right: $gap
+        font:
+          size: 18px
+          weight: bold
+          style: normal
+/** Tips */
+.#{$corpName}-sell-tips-container

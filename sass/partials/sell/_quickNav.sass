@@ -1,0 +1,22 @@
+@import ../common
+.#{$corpName}-sell-aside-container
+  height: 320px
+
+.#{$corpName}-quick-nav-title-container
+  width: $limit-width - $limit-small-width
+  height: 40px
+  & > .#{$corpName}-title-divider
+    @extend %title-divider
+    height: 20px
+  & > .#{$corpName}-quick-title-text
+    color: $text-dark
+.#{$corpName}-quick-nav-lists-container
+  .#{$corpName}-quick-nav-item
+    padding-left: 50px
+    margin-bottom: $gap
+  .#{$corpName}-quick-nav-item-link
+    color: $text-gray
+    border-bottom: 1px solid $text-gray
+    letter-spacing: 2px
+    font:
+      size: 14px
