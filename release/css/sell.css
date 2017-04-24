@@ -46,6 +46,11 @@ button {
   height: 400px; }
 
 /** BERFORE ARE DEV ONLY */
+.tmp-background {
+  width: 748px;
+  height: 200px;
+  background: #4a979c; }
+
 .CYQC-sell-contents-container {
   width: 748px;
   height: 100%;

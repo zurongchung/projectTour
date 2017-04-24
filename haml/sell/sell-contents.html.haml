@@ -27,6 +27,9 @@
             %ul
               - info["list"].each_with_index do |text, index|
                 %li{class: "#{@corpName}sell-#{info["en"]}-list"}= text
+    %div{class: "#{@corpName}sell-banner-container"}
+      -#%img{class: "#{@corpName}sell-banner-background-image"}
+      %div{class: "tmp-background"}
     %div{class: "#{@corpName}sell-notice-know-it-container"}
       %div{class: "#{@corpName}sell-notice-know-it-title-container"}
         %img{class: "#{@corpName}sell-know-it-title-background", src: knowIt["icon"]["url"], width: knowIt["icon"]["w"], height: knowIt["icon"]["h"]}
