@@ -1,4 +1,8 @@
 {
+  "title": {
+    "en": "Quick Nav",
+    "cn": "快速导航"
+  },
   "lists": [
     {
       "text": "套餐",
