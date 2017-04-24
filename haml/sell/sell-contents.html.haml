@@ -1,8 +1,10 @@
 - data = @sellDB["info"]
+- knowIt = @sellDB["notices"]["knowIt"]
 - graphics = @sellDB["assets"]
 - imgBackgroundTypeC = @sellDB["assets"]["imgBackgroundTypeC"]
 %div{class: "#{@corpName}sell-outter-wrap"}
   %div{class: "#{@corpName}sell-aside-container"}
+    = add_fragment @quickNavContents
   %div{class: "#{@corpName}sell-contents-container"}
     %div{class: "#{@corpName}sell-header-container"}
       %img{class: "#{@corpName}sell-header-background", src: imgBackgroundTypeC["url"], width: imgBackgroundTypeC["size"]["w"], height: imgBackgroundTypeC["size"]["h"]}
@@ -23,3 +25,9 @@
             %ul
               - info["list"].each_with_index do |text, index|
                 %li{class: "#{@corpName}sell-#{info["en"]}-list"}= text
+    %div{class: "#{@corpName}sell-notice-know-it-container"}
+      %div{class: "#{@corpName}sell-notice-know-it-title-container"}
+        %span{class: "#{@corpName}sell-notice-title"}
+      %div{class: "#{@corpName}sell-notice-know-it-contents-container"}
+        %p{class: "#{@corpName}sell-notice-pragraph"}
+          %em{class: "#{@corpName}sell-notice-sub-title"}

@@ -1,0 +1,6 @@
+%div{class: "#{@corpName}quick-nav-title-container"}
+%div{class: "#{@corpName}quick-nav-lists-container"}
+  %ul
+    - @quickNav["lists"].each_with_index do |item, index|
+      %li{class: "#{@corpName}quick-nav-item"}
+        %a{class: "#{@corpName}quick-nav-item-link", href: item["url"], target: "_self"}= item["text"]
