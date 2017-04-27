@@ -7,6 +7,13 @@
         "h": 51
       }
     },
+    "search": {
+      "url": "../assets/home/search.png",
+      "size": {
+        "w": 20,
+        "h": 26
+      }
+    },
     "imgText": {
       "url": "https://img.alicdn.com/imgextra/i2/830133302/TB2t9JWphhmpuFjSZFyXXcLdFXa_!!830133302.png",
       "size": {
@@ -26,6 +33,13 @@
       "size": {
         "w": 234,
         "h": 150
+      }
+    },
+    "searchBackground": {
+      "url": "#",
+      "size": {
+        "w": 950,
+        "h": 220
       }
     },
     "gradientBackground": {

@@ -1,0 +1,110 @@
+body {
+background:#F8F8F8;
+}
+
+.grid-m .tshop-pbsm-shop-custom-banner,.grid-m0 .tshop-pbsm-shop-custom-banner {
+overflow:visible;
+}
+
+.skin-box-bd {
+overflow:visible;
+height:42px;
+background:#FFF;
+}
+
+.title {
+font:13px/1.875 "microsoft yahei",tahoma,arial,\5b8b\4f53;
+color:#5E6870;
+letter-spacing:.1em;
+text-align:center;
+width:80px;
+height:40px;
+line-height:40px;
+margin:0;
+}
+
+.menu-list .menu-selected .link {
+background:none;
+border-top:2px solid #33D656;
+}
+
+.menu-list {
+width:auto;
+float:right;
+}
+
+.menu-list .menu {
+width:80px;
+display:inline-block;
+padding:0;
+}
+
+.all-cats .link .popup-icon {
+background:url(//gdp.alicdn.com/imgextra/i3/830133302/TB2c4HmdFXXXXcvXpXXXXXXXXXX_!!830133302.png) no-repeat 0 6px;
+margin-top:9px;
+}
+
+.all-cats:hover .link .popup-icon,.all-cats-hover .link .popup-icon {
+background-position:0 -11px;
+}
+
+.all-cats .link,.menu {
+background:#FFF;
+}
+
+.all-cats .popup-trigger a.link {
+width:164px;
+height:40px;
+line-height:40px;
+}
+
+.menu-list .link {
+width:80px;
+height:40px;
+line-height:40px;
+padding:0;
+}
+
+.popup-content {
+border:none;
+background:#FFF;
+box-shadow:0 0 4px rgba(0,0,0,0.2);
+}
+
+.snd-pop-inner {
+height:auto;
+background:#FFF;
+opacity:1;
+padding:0 0 10px;
+}
+
+.fst-cat-name,.snd-cat-name {
+font:13px/1.875 "microsoft yahei",tahoma,arial,\5b8b\4f53;
+color:#686B77;
+height:40px;
+line-height:40px;
+letter-spacing:.1em;
+}
+
+.fst-cat-icon,.snd-cat-icon {
+background:none;
+}
+
+.menu-list .menu-selected .link .title,.menu-list .link:hover .title,.all-cats-hover .popup-trigger a.link .title,.popup-content .cats-tree .cat-hd:hover .fst-cat-name,.popup-content .cats-tree .cat-hd-hover .fst-cat-name,a.snd-cat-name:hover {
+color:#5CBE64;
+}
+
+.all-cats-hover .popup-trigger a.link,.menu-list .link:hover,.menu-list .menu:hover .link,.menu-list .link-hover .link {
+border-top:2px solid #33D656;
+background:none;
+}
+
+.fst-cat:hover .popup-trigger a.link,.cat-hd:hover,.cats-tree .cat-hd-hover,.snd-cat-hd-hover {
+border-left:2px solid #33D656;
+background:none;
+}
+
+.popup-content .cats-tree .fst-cat,.popup-content .cats-tree .fst-cat-hd,.popup-content .cats-tree .snd-cat-hd {
+height:40px;
+line-height:40px;
+}

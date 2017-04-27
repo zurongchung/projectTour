@@ -33,6 +33,10 @@ p {
 button {
   cursor: pointer; }
 
+input {
+  padding: 0;
+  border: none; }
+
 /** HEADER */
 header {
   width: 1920px;
@@ -80,7 +84,8 @@ header {
     height: 320px; }
   #CYQC-main-contents-container > .CYQC-splash-1 {
     width: 100%;
-    height: 270px; }
+    height: 400px;
+    margin-bottom: 40px; }
   #CYQC-main-contents-container > .CYQC-splash-2 {
     width: 100%;
     height: auto;
@@ -140,7 +145,8 @@ header {
 
 #CYQC-search-title-container {
   width: auto;
-  height: auto; }
+  height: auto;
+  margin-bottom: 40px; }
   #CYQC-search-title-container > span {
     color: #707070; }
     #CYQC-search-title-container > span.CYQC-search-title {
@@ -298,5 +304,40 @@ header {
         margin-right: 10px;
         height: 35px;
         line-height: 35px; }
+
+.CYQC-search-in-shop {
+  width: 350px;
+  height: 38px;
+  position: relative;
+  top: -140px;
+  left: 320px; }
+  .CYQC-search-in-shop .CYQC-search-field {
+    width: 100%;
+    height: 38px;
+    border: 2px solid rgba(0, 255, 255, 0.4);
+    padding: 4px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    color: #b7b7b7;
+    font-size: 18px;
+    font-weight: lighter; }
+
+.CYQC-search-btn-wrap {
+  width: auto;
+  height: 38px;
+  float: right;
+  position: relative;
+  top: -32px;
+  left: -15px;
+  display: inline-block; }
+
+.CYQC-search-icon,
+#CYQC-submit-btn {
+  display: inline-block;
+  cursor: pointer; }
+
+#CYQC-submit-btn {
+  /** search icon size */
+  display: none; }
 
 /*# sourceMappingURL=app.css.map */

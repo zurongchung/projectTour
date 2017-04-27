@@ -27,6 +27,10 @@ p {
 button {
   cursor: pointer; }
 
+input {
+  padding: 0;
+  border: none; }
+
 div.outter_container {
   width: 1024px;
   height: 100%;

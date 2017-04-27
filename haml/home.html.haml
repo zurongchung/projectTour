@@ -3,6 +3,8 @@
 - logo = @data["assets"]["logo"]
 - imgBackgroundTypeA = @data["assets"]["imgBackgroundTypeA"]
 - imgBackgroundTypeB = @data["assets"]["imgBackgroundTypeB"]
+- searchBackground = @data["assets"]["searchBackground"]
+- searchIcon = @data["assets"]["search"]
 - imgText = @data["assets"]["imgText"]
 - productIntro = @data["productIntro"]
 %header
@@ -34,7 +36,13 @@
           %span{class: "#{@corpName}search-title"} 想去欣赏世界美景了？
           %span{class: "#{@corpName}search-title-en"} See what we've got for you!
         %div{id: "#{@corpName}search-box-container"}
-          -# add search box here
+          %img{class: "#{@corpName}search-box-background", width: searchBackground["size"]["w"], height: searchBackground["size"]["h"], src: searchBackground["url"]}
+          %form{target: "_top", action: "our.search.page", method: "GET", class: "#{@corpName}search-in-shop", name: "searchForm"}
+            %input{class: "#{@corpName}search-field", name: "keyword", value: "enter somethin"}
+            %div{class: "#{@corpName}search-btn-wrap"}
+              %label{for: "#{@corpName}submit-btn", id: "#{@corpName}search-btn-icon"}
+                %img{class: "#{@corpName}search-icon", src: searchIcon["url"], width: searchIcon["size"]["w"], height: searchIcon["size"]["h"]}
+              %input{type: "submit", id: "#{@corpName}submit-btn", value: ""}
       - else
         %div{id: "#{@corpName}product-intro-title-container"}
           %div{class: "#{@corpName}product-intro-title-top"}

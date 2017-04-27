@@ -1,0 +1,8 @@
+{
+  "assets": [
+    {
+      "target": "#",
+      "img": "../assets/carousel/name_of_img.png"
+    }
+  ]
+}
