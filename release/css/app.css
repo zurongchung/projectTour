@@ -305,21 +305,30 @@ header {
         height: 35px;
         line-height: 35px; }
 
+.focus-word {
+  font-size: 24px;
+  font-weight: bold;
+  font-color: white; }
+
+.CYQC-search-keyword {
+  display: inline-block; }
+
 .CYQC-search-in-shop {
   width: 350px;
   height: 38px;
   position: relative;
-  top: -140px;
-  left: 320px; }
+  top: -134px;
+  left: 300px; }
   .CYQC-search-in-shop .CYQC-search-field {
     width: 100%;
     height: 38px;
-    border: 2px solid rgba(0, 255, 255, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    background: none;
     padding: 4px;
     -webkit-border-radius: 15px;
     border-radius: 15px;
     color: #b7b7b7;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: lighter; }
 
 .CYQC-search-btn-wrap {
@@ -334,7 +343,8 @@ header {
 .CYQC-search-icon,
 #CYQC-submit-btn {
   display: inline-block;
-  cursor: pointer; }
+  cursor: pointer;
+  opacity: 0.5; }
 
 #CYQC-submit-btn {
   /** search icon size */

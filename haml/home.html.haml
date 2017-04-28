@@ -5,6 +5,7 @@
 - imgBackgroundTypeB = @data["assets"]["imgBackgroundTypeB"]
 - searchBackground = @data["assets"]["searchBackground"]
 - searchIcon = @data["assets"]["search"]
+- searchKeywords = @searchKeywords["keywords"]
 - imgText = @data["assets"]["imgText"]
 - productIntro = @data["productIntro"]
 %header
@@ -37,8 +38,20 @@
           %span{class: "#{@corpName}search-title-en"} See what we've got for you!
         %div{id: "#{@corpName}search-box-container"}
           %img{class: "#{@corpName}search-box-background", width: searchBackground["size"]["w"], height: searchBackground["size"]["h"], src: searchBackground["url"]}
+          %div{class: "#{@corpName}search-keywords-top-container"}
+            - searchKeywords.each_with_index do |word, index|
+              - focus = "focus-word" if index == 1 || index == 5
+              - if index < 3
+                %div{class: "#{@corpName}search-keywords-top"}
+                  %ul
+                    %li{class: "#{@corpName}search-keyword #{focus}"}= word
+              - else
+                %div{class: "#{@corpName}search-keywords-bottom"}
+                  %ul
+                    %li{class: "#{@corpName}search-keyword #{focus}"}= word
+
           %form{target: "_top", action: "our.search.page", method: "GET", class: "#{@corpName}search-in-shop", name: "searchForm"}
-            %input{class: "#{@corpName}search-field", name: "keyword", value: "enter somethin"}
+            %input{class: "#{@corpName}search-field", name: "keyword", placeholder: "输入景点名称"}
             %div{class: "#{@corpName}search-btn-wrap"}
               %label{for: "#{@corpName}submit-btn", id: "#{@corpName}search-btn-icon"}
                 %img{class: "#{@corpName}search-icon", src: searchIcon["url"], width: searchIcon["size"]["w"], height: searchIcon["size"]["h"]}

@@ -5,6 +5,7 @@ _IN = ROOT + 'haml/app.html.haml'
 _OUT = ROOT + 'release/html/app.html'
 DB_HOME = ROOT + 'db/home.json'
 DB_SUGGESTIONS = ROOT + 'db/suggestions.json'
+DB_KEYWORDS = ROOT + 'db/searchKeywords.json'
 class Home < HTML
   attr_accessor :data, :h2hDataExchange
   def initialize(_i, _o)
@@ -14,6 +15,7 @@ class Home < HTML
     @footer = ROOT + 'haml/home/footer.html.haml'
     @data = JSON.parse(readData(DB_HOME))
     @suggestions = JSON.parse(readData(DB_SUGGESTIONS))
+    @searchKeywords = JSON.parse(readData(DB_KEYWORDS))
     @h2hDataExchange = nil
   end
   def setData(data)

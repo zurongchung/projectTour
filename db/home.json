@@ -1,7 +1,7 @@
 {
   "assets": {
     "logo": {
-      "url": "https://img.alicdn.com/imgextra/i1/830133302/TB2KbxepbBnpuFjSZFGXXX51pXa_!!830133302.png",
+      "url": "../assets/home/logo.png",
       "size": {
         "w": 54,
         "h": 51
@@ -15,28 +15,28 @@
       }
     },
     "imgText": {
-      "url": "https://img.alicdn.com/imgextra/i2/830133302/TB2t9JWphhmpuFjSZFyXXcLdFXa_!!830133302.png",
+      "url": "../assets/home/deco_text.png",
       "size": {
         "w": 151,
         "h": 35
       }
     },
     "imgBackgroundTypeA": {
-      "url": "https://img.alicdn.com/imgextra/i2/830133302/TB2gyOephlmpuFjSZPfXXc9iXXa_!!830133302.png",
+      "url": "../assets/home/img_background.png",
       "size": {
         "w": 208,
         "h": 88
       }
     },
     "imgBackgroundTypeB": {
-      "url": "https://img.alicdn.com/imgextra/i3/830133302/TB2p6bvjKtTMeFjSZFOXXaTiVXa_!!830133302.png",
+      "url": "../assets/home/img_background_2.png",
       "size": {
         "w": 234,
         "h": 150
       }
     },
     "searchBackground": {
-      "url": "#",
+      "url": "../assets/home/search_background.png",
       "size": {
         "w": 950,
         "h": 220

@@ -1,18 +1,26 @@
+.focus-word
+  font:
+    size: 24px
+    weight: bold
+    color: white
+.#{$corpName}-search-keyword
+  display: inline-block
 .#{$corpName}-search-in-shop
   width: 350px
   height: 38px
   position: relative
-  top: -140px
-  left: 320px
+  top: -134px
+  left: 300px
   .#{$corpName}-search-field
     width: 100%
     height: 38px
-    border: 2px solid rgba(0,255,255,.4)
+    border: 2px solid rgba(255,255,255,.7)
+    background: none
     padding: 4px
     +border-radius(15px)
     color: $text-light-gray
     font:
-      size: 18px
+      size: 14px
       weight: lighter
 .#{$corpName}-search-btn-wrap
   width: auto
@@ -26,6 +34,7 @@
 ##{$corpName}-submit-btn
   display: inline-block
   cursor: pointer
+  opacity: .5
 ##{$corpName}-submit-btn
   /** search icon size */
   display: none
