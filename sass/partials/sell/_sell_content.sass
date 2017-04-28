@@ -11,6 +11,26 @@ $limit-small-width: 748px
   width: 197px
   height: 400px
 /** BERFORE ARE DEV ONLY */
+.#{$corpName}-warn-small,
+.#{$corpName}-warn
+  font:
+    weight: 200
+.#{$corpName}-warn-small
+  margin: 5px 0
+  list-style: none
+  font-size: 14px !important
+  border-left: 2px solid orange
+  padding-left: $gap
+.#{$corpName}-warn
+  padding: 0 40px
+  letter-spacing: 2px
+  text-align: center
+  margin-bottom: 40px
+  border-top: $divider-thick dashed orange
+  border-bottom: $divider-thick dashed orange
+  & > p
+    line-height: 28px
+    margin-bottom: 5px
 .tmp-background
   width: 748px
   height: 200px
@@ -21,7 +41,7 @@ $limit-small-width: 748px
   border-left: $divider-thick solid $divider-color
   border-right: $divider-thick solid $divider-color
   ul
-    list-style: disc
+    list-style: url('../assets/dot.png')
     list-style-position: inside
   & > div
     margin-bottom: $gap * 12

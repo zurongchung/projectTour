@@ -8,6 +8,10 @@
             %img{src: img, width: contents["w"], height: contents["h"]}
         - else
           %img{src: item['url'], width: contents["w"], height: contents["h"]}
+    - if item.has_key?("warn")
+      %div{class: "#{@corpName}warn"}
+        - item["warn"].each do |words|
+          %p= words
     %div{class: "#{@corpName}trip-desc-container"}
       - item["desc"].each do |sentence|
         %p{class: "#{@corpName}desc"}= sentence

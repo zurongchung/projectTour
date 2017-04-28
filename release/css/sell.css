@@ -50,6 +50,28 @@ input {
   height: 400px; }
 
 /** BERFORE ARE DEV ONLY */
+.CYQC-warn-small,
+.CYQC-warn {
+  font-weight: 200; }
+
+.CYQC-warn-small {
+  margin: 5px 0;
+  list-style: none;
+  font-size: 14px !important;
+  border-left: 2px solid orange;
+  padding-left: 10px; }
+
+.CYQC-warn {
+  padding: 0 40px;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 40px;
+  border-top: 1px dashed orange;
+  border-bottom: 1px dashed orange; }
+  .CYQC-warn > p {
+    line-height: 28px;
+    margin-bottom: 5px; }
+
 .tmp-background {
   width: 748px;
   height: 200px;
@@ -61,7 +83,7 @@ input {
   border-left: 1px solid #ebebeb;
   border-right: 1px solid #ebebeb; }
   .CYQC-sell-contents-container ul {
-    list-style: disc;
+    list-style: url("../assets/dot.png");
     list-style-position: inside; }
   .CYQC-sell-contents-container > div {
     margin-bottom: 120px; }

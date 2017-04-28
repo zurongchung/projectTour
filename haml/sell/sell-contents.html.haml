@@ -30,7 +30,10 @@
           %div{class: "#{@corpName}sell-info-wrap"}
             %ul
               - info["list"].each_with_index do |text, index|
-                %li{class: "#{@corpName}sell-#{info["en"]}-list"}= text
+                - warn = ""
+                - if /^tips/.match(text)
+                  - warn = "#{@corpName}warn-small"
+                %li{class: "#{@corpName}sell-#{info["en"]}-list #{warn}"}= text
     %div{class: "#{@corpName}sell-banner-container"}
       -#%img{class: "#{@corpName}sell-banner-background-image"}
       %div{class: "tmp-background"}

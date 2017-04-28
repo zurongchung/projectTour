@@ -1,0 +1,35 @@
+-# coding: utf-8
+- imgs =  @carouselContents["scenes"]["img"]
+- desc =  @carouselContents["scenes"]["desc"]
+- height =  @carouselContents["h"]
+- width =  @carouselContents["w"]
+- indicator =  @carouselContents["indicator"]
+- dot =  @carouselContents["dot"]
+%div{style: "height:350px;"}
+  %div{class: "footer-more-trigger", style: "width: #{width}px;height:#{height}px;top:auto;padding:0px;border:none;border:0px;left:50%;"}
+    %div{class: "footer-more-trigger", style: "width: #{width}px; height: #{height}px;padding:0px;border:none;border:0px;left:-1060px;"}
+      %div{"data-widget-config": "{&quot;nextBtnCls&quot;:&quot;next1408519344899&quot;,&quot;circular&quot;:true,&quot;activeTriggerCls&quot;:&quot;arrow-d&quot;,&quot;easing&quot;:&quot;easeOutStrong&quot;,&quot;viewSize&quot;:[1920],&quot;effect&quot;:&quot;scrollx&quot;,&quot;navCls&quot;:&quot;wenyukuncom1408519344&quot;,&quot;prevBtnCls&quot;:&quot;prev1408519344899&quot;,&quot;contentCls&quot;:&quot;wenyukun1408519344&quot;,&quot;autoplay&quot;:true}", "data-widget-type": "Carousel", class: "J_TWidget"}
+        %div{style: "height:#{height}px;width:#{width}px;overflow:hidden;padding:0px;margin:0px;position:relative;", class: "kun1920"}
+          %ul{class: "wenyukun1408519344", style: "height:350px;width:999999px;padding:0px;margin:0px;left:-#{width}px;"}
+            %li{style: "width: #{width}px;height: #{height}px;padding:0px;margin:0px;display:block;float:left;", class: "ks-switchable-panel-internal13"}
+              %a{target: "_blank", style: "padding:0px;margin:0px;"}
+                %img{src: "#", width: "#{width}px", height: "#{height}px", border: "0px"}
+          %li{style: "width: #{width}px;height: #{height}px;padding:0px;margin:0px;display:block;float:left;", class: "ks-switchable-panel-internal13"}
+            %a{target: "_blank", style: "padding:0px;margin:0px;"}
+              %img{src: "#", width: "#{width}", height: "#{height}", border: "0px"}
+          %li{style: "width: #{width}px;height: #{height}px;padding:0px;margin:0px;display:block;float:left;", class: "ks-switchable-panel-internal13"}
+            %a{target: "_blank", style: "padding:0px;margin:0px;"}
+              %img{src: "#", width: "#{width}px", height: "#{height}px", border: "0px"}
+        %div{class: "footer-more-trigger", style: "padding:0px;border:none;border:0px;left:50%;"}
+          %div{class: "footer-more-trigger", style:"width:418px;height:45px;padding:0px;border:none;border:0px;left:-209px;top:312px;"}
+            %div{class:"prev1408519344899", style: "width: #{indicator["w"]}px;float:left;"}
+              %img{src: indicator['url'], width: indicator["w"], height: indicator["h"]}
+            %ul{class: "wenyukuncom1408519344", style: "width:358px;float:left;height:45px;margin-left:10px;text-align:center;border:none;border:0px;"}
+              %li{class: "ks-switchable-trigger-internal12", style: "display:inline;background:none;margin:0 5px;cursor:pointer;padding:0px 0px;padding-top:10px;line-height: #{indicator['h']}px;"}
+                %img{src: dot['url'], width: dot['w'], height: dot['h']}
+              %li{class: "ks-switchable-trigger-internal12 arrow-d", style: "display:inline;background:none;margin:0 5px;cursor:pointer;padding:0px 0px;padding-top:10px;line-height: #{indicator['h']}px;"}
+                %img{src: dot['url'], width: dot['w'], height: dot['h']}
+              %li{class: "ks-switchable-trigger-internal12", style: "display:inline;background:none;margin:0 5px;cursor:pointer;padding:0px 0px;padding-top:10px;line-height: #{indicator['h']}px;"}
+                %img{src: dot['url'], width: dot['w'], height: dot['h']}
+            %div{class: "next1408519344899", style: "width:#{indicator["w"]}px;float:right;margin-left:14px;"}
+              %img{src: indicator['url'], width: indicator["w"], height: indicator["h"]}
