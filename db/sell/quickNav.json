@@ -6,23 +6,31 @@
   "lists": [
     {
       "text": "套餐",
-      "url": "#"
+      "url": "bundle"
     },
     {
       "text": "酒店配置",
-      "url": "#"
+      "url": "hotel"
+    },
+    {
+      "text": "入住须知",
+      "url": "checkIn"
     },
     {
       "text": "早餐供应",
-      "url": "#"
+      "url": "breakfast"
     },
     {
       "text": "预约须知",
-      "url": ""
+      "url": "knowIt"
     },
     {
-      "text": "景点预览",
-      "url": "#"
+      "text": "温馨提示",
+      "url": "tips"
+    },
+    {
+      "text": "行程推荐",
+      "url": "trip"
     }
   ]
 }

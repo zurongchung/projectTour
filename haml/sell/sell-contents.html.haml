@@ -2,8 +2,12 @@
 - data = @sellDB["info"]
 - knowIt = @sellDB["notices"]["knowIt"]
 - tips = @sellDB["notices"]["tips"]
+- checkIn = @sellDB["notices"]["checkIn"]
+- tripIntor = @sellDB["tripIntro"]
 - graphics = @sellDB["assets"]
 - imgBackgroundTypeC = @sellDB["assets"]["imgBackgroundTypeC"]
+- gradientBorderBackgroundTips = @sellDB["assets"]["gradientBorderBackgroundTips"]
+- gradientBorderBackgroundWarn = @sellDB["assets"]["gradientBorderBackgroundWarn"]
 %div{class: "#{@corpName}sell-outter-wrap"}
   %div{class: "#{@corpName}sell-aside-container"}
     = add_fragment @quickNavContents
@@ -11,7 +15,7 @@
     %div{class: "#{@corpName}sell-header-container"}
       %img{class: "#{@corpName}sell-header-background", src: imgBackgroundTypeC["url"], width: imgBackgroundTypeC["size"]["w"], height: imgBackgroundTypeC["size"]["h"]}
       %span{class: "#{@corpName}sell-header-text-has-background"} 套餐
-    %div{class: "#{@corpName}sell-bundle-info-container"}
+    %div{id: "#{@corpName}bundle", class: "#{@corpName}sell-bundle-info-container"}
       - data.each_with_index do |info, index|
         %div{class: "#{@corpName}sell-bundle-#{info["en"]}-container"}
           %div{class: "#{@corpName}sell-title-wrap"}
@@ -30,9 +34,9 @@
     %div{class: "#{@corpName}sell-banner-container"}
       -#%img{class: "#{@corpName}sell-banner-background-image"}
       %div{class: "tmp-background"}
-    %div{class: "#{@corpName}sell-notice-know-it-container"}
+    %div{id: "#{@corpName}knowIt", class: "#{@corpName}sell-notice-know-it-container"}
       %div{class: "#{@corpName}sell-notice-know-it-title-container"}
-        %img{class: "#{@corpName}sell-know-it-title-background", src: knowIt["icon"]["url"], width: knowIt["icon"]["w"], height: knowIt["icon"]["h"]}
+        %img{class: "#{@corpName}sell-know-it-title-background", src: gradientBorderBackgroundWarn["url"], width: gradientBorderBackgroundWarn["size"]["w"], height: gradientBorderBackgroundWarn["size"]["h"]}
         %div{class: "#{@corpName}sell-title-position"}
           %span{class: "#{@corpName}sell-title title-en"}= knowIt["en"]
           %i{class: "#{@corpName}title-divider"}
@@ -43,9 +47,9 @@
             %p{class: "#{@corpName}sell-notice-pragraph"}
               %em{class: "#{@corpName}sell-notice-sub-title"}= data["title"]
               = data["content"]
-    %div{class: "#{@corpName}sell-tips-container"}
+    %div{id: "#{@corpName}tips", class: "#{@corpName}sell-tips-container"}
       %div{class: "#{@corpName}sell-notice-tips-title-container"}
-        %img{class: "#{@corpName}sell-tips-title-background", src: tips["icon"]["url"], width: tips["icon"]["w"], height: tips["icon"]["h"]}
+        %img{class: "#{@corpName}sell-tips-title-background", src: gradientBorderBackgroundTips["url"], width: gradientBorderBackgroundTips["size"]["w"], height: gradientBorderBackgroundTips["size"]["h"]}
         %div{class: "#{@corpName}sell-title-position"}
           %span{class: "#{@corpName}sell-title title-en"}= tips["en"]
           %i{class: "#{@corpName}title-divider"}
@@ -56,3 +60,24 @@
             - tips["contents"].each_with_index do |data, index|
               %li{class: "#{@corpName}sell-notice-pragraph"}
                 = data
+    %div{id: "#{@corpName}checkIn", class: "#{@corpName}sell-hotel-check-in-container"}
+      %div{class: "#{@corpName}sell-notice-hotel-check-in-title-container"}
+        %img{class: "#{@corpName}sell-hotel-check-in-title-background", src: gradientBorderBackgroundTips["url"], width: gradientBorderBackgroundTips["size"]["w"], height: gradientBorderBackgroundTips["size"]["h"]}
+        %div{class: "#{@corpName}sell-title-position"}
+          %span{class: "#{@corpName}sell-title title-en"}= checkIn["en"]
+          %i{class: "#{@corpName}title-divider"}
+          %span{class: "#{@corpName}sell-title title-cn"}= checkIn["cn"]
+      %div{class: "#{@corpName}sell-notice-position"}
+        %div{class: "#{@corpName}sell-notice-hotel-check-in-contents-container"}
+          %ul
+            - checkIn["contents"].each_with_index do |data, index|
+              %li{class: "#{@corpName}sell-notice-pragraph"}
+                = data
+    %div{id: "#{@corpName}trip", class: "#{@corpName}sell-scene-intro-container"}
+      %div{class: "#{@corpName}sell-notice-hotel-check-in-title-container"}
+        %img{class: "#{@corpName}sell-scene-intro-title-background", src: gradientBorderBackgroundTips["url"], width: gradientBorderBackgroundTips["size"]["w"], height: gradientBorderBackgroundTips["size"]["h"]}
+        %div{class: "#{@corpName}sell-title-position"}
+          %span{class: "#{@corpName}sell-title title-en"}= tripIntor["en"]
+          %i{class: "#{@corpName}title-divider"}
+          %span{class: "#{@corpName}sell-title title-cn"}= tripIntor["cn"]
+      = add_fragment @carouselElement

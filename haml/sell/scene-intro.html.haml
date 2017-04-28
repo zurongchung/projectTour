@@ -1,0 +1,13 @@
+- contents = @carouselContents
+- contents['scenes'].each_with_index do |item, index|
+  %div{class: "#{@corpName}trip-intro-container"}
+    - if item.has_key?("url")
+      %div{class: "#{@corpName}trip-photos-container"}
+        - if item["url"].instance_of?(Array)
+          - item["url"].each do |img|
+            %img{src: img, width: contents["w"], height: contents["h"]}
+        - else
+          %img{src: item['url'], width: contents["w"], height: contents["h"]}
+    %div{class: "#{@corpName}trip-desc-container"}
+      - item["desc"].each do |sentence|
+        %p{class: "#{@corpName}desc"}= sentence

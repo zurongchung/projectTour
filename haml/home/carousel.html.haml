@@ -1,32 +1,25 @@
-- carousel = @carousel["assets"]
-- height: 600px
-- homePage: ""
-- shopId : ""
+- contents = @carousel["contents"]["assets"]
+- height = @carousel["h"]
+- width = @carousel["w"]
+- homePage = ""
+- shopId  = ""
 %div{class: "J_TWidget", "data-widget-config": "{'effect': 'fade', 'circular': true ,'contentCls': #{shopId}}", "data-widget-type": "Tabs", style: "height: #{height}; overflow:hidden;"}
   %div{class: shopId, style: "height:#{height};"}
-    %div{class: "footer-more-trigger", style: "width:1920px;height:#{height};top:auto;padding:0px;border:none;left:50%;"}
-      %div{class: "J_TWidget", "data-widget-config": "{
-      'effect':'scrollx',
-      'easing':'elasticOut',
-      'autoplay':true,
-      'prevBtnCls':'pre#{shopId}trigger',
-      'nextBtnCls':'next#{shopId}trigger',
-      'contentCls': 'carouse#{shopId}content',
-      'navCls': 'carouse#{shopId}trigger',
-      'duration':0.5,
-      'activeTriggerCls':'hidden'
-      }", 'data-widget-type': 'Carousel'}
-        %div{class: "#{corpName}#{shopId}trigger", style: "width:1920px;height:#{height};overflow:hidden;"}
+    %div{class: "footer-more-trigger", style: "width: #{width};height:#{height};top:auto;padding:0px;border:none;left:50%;"}
+      %div{class: "J_TWidget", "data-widget-config": "{'effect':'scrollx','easing':'elasticOut','autoplay':true,'prevBtnCls':'pre#{shopId}trigger','nextBtnCls':'next#{shopId}trigger','contentCls': 'carouse#{shopId}content','navCls': 'carouse#{shopId}trigger','duration':0.5,'activeTriggerCls':'hidden'}", 'data-widget-type': 'Carousel'}
+        %div{class: "#{corpName}#{shopId}trigger", style: "width:#{width};height:#{height};overflow:hidden;"}
           %ul{class: "carouse#{shopId}content"}
-            - carousel.each do |item|
-            %li
-              %span
+            - contents.each do |item|
+              %li
                 %span
-                  %a{"data-attr-replace": "[{'type':'href','desc': #{homePage}}]", href: item["target"], target: "_blank"}
-                    %img{border: 0, "data-attr-replace": "[{'type':'img','desc'}]", src: item["img"], width: 1920, height: height}
-        %ul{class: "carouse#{shopId}trigger footer-more-trigger", style:"border-right:0px;padding-right:0px;border-top:0px;padding-left:0px;z-index:99;
-        background:url() no-repeat 0px 0px;left:930px;padding-bottom:0px;border-left:0px;width:70px;text-indent:0px;line-height:11px;padding-top:0px;border-bottom:0px;top:562px;height:11px;"}
-          - carousel.each_with_index do |item, index|
+                  %span
+                    - if contents.has_key?("target")
+                      %a{"data-attr-replace": "[{'type':'href','desc': #{homePage}}]", href: item["target"], target: "_blank"}
+                        %img{border: 0, "data-attr-replace": "[{'type':'img','desc'}]", src: item["url"], width: width, height: height}
+                    - else
+                      %img{border: 0, "data-attr-replace": "[{'type':'img','desc'}]", src: item["url"], width: width, height: height}
+        %ul{class: "carouse#{shopId}trigger footer-more-trigger", style:"border-right:0px;padding-right:0px;border-top:0px;padding-left:0px;z-index:99;background:url() no-repeat 0px 0px;left:930px;padding-bottom:0px;border-left:0px;width:70px;text-indent:0px;line-height:11px;padding-top:0px;border-bottom:0px;top:562px;height:11px;"}
+          - contents.each_with_index do |item, index|
             - hidden = ""
             - hidden = "hidden" if index == 0
             %li{class: hidden, style:"display:inline;float:left;cursor:pointer;"}

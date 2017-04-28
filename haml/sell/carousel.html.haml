@@ -1,0 +1,26 @@
+- contents = @carouselContents["imgs"]
+- height = @carouselContents["h"]
+- width = @carouselContents["w"]
+- indicator = @carouselContents["indicator"]
+- dots = @carouselContents["dot"]
+- shopId  = "123456"
+%div{style: "height: #{height}px;"}
+  %div{class: "footer-more-trigger", style: "width:#{width};height:#{height};top:auto;padding:0px;border:none;border:0px;left:50%;"}
+    %div{class:"footer-more-trigger", style:"width: #{width};height: #{height};padding:0px;border:none;border:0px;left:-1060px;"}
+      %div{class: "J_TWidget", "data-widget-config": "{&quot;contentCls&quot;: &quot;wenyukun#{shopId}&quot;,&quot;navCls&quot;: &quot;wenyukuncom#{shopId}&quot;,&quot;effect&quot;: &quot;scrollx&quot;,&quot;easing&quot;:&quot;easeOutStrong&quot;,&quot;prevBtnCls&quot;:&quot;prev#{shopId}899&quot;,&quot;nextBtnCls&quot;:&quot;next#{shopId}899&quot;,&quot;autoplay&quot;: true,&quot;viewSize&quot;:[#{width}],&quot;circular&quot;: true,&quot;activeTriggerCls&quot;: &quot;arrow-d&quot;}","data-widget-type": "Carousel"}
+        %div{style: "height: #{height}px;width: #{width}px;overflow:hidden;padding:0px;margin:0px;", class: "#{@corpName}#{width}"}
+          %ul{class: "#{@corpName}#{shopId}", style: "height:#{height}px;width:#{width}px;padding:0px;margin:0px;"}
+            - contents.each do |item|
+              %li{style: "width: #{width}px;height:#{height}px;padding:0px;margin:0px;"}
+                %img{src: item["url"], width: width, height: height, border: '0px'}
+        %div{class: "footer-more-trigger", style: "padding:0px;border:none;border:0px;left:50%;"}
+          %div{class: "footer-more-trigger", style: "width:418px;height:45px;padding:0px;border:none;border:0px;left:-209px;top:312px;"}
+            -# left arrow
+            %div{class: "prev#{shopId}", style: "width:#{indicator['w']}px;float:left;"}
+              %img{src: indicator["urlLeft"], width: indicator['w'], height: indicator['h']}
+            -# center indicator
+            %ul{class: "#{@corpName}#{shopId}", style: "width:358px;float:left;height:45px;margin-left:10px;text-align:center;border:none;border:0px;"}
+              %li{class: "arrow-d", style:"display:inline;background:none;margin:0 5px;cursor:pointer;padding:0px 0px;padding-top:10px;line-height: #{indicator['w']}px;"}
+                %img{src: dots['url'], width: dots['w'], height: dots['h']}
+            %div{class: "next#{shopId}", style: "width:#{indicator['w']}px;float:right;margin-left:14px;"}
+              %img{src: indicator["urlRight"], width: indicator['w'], height: indicator['h']}

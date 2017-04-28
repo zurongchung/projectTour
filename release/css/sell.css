@@ -112,13 +112,13 @@ input {
   .CYQC-sell-info-wrap > ul > li {
     letter-spacing: 2px;
     margin-bottom: 10px;
-    font-size: 16px; }
-  .CYQC-sell-info-wrap > ul > .CYQC-sell-Include-list {
-    color: #555555;
-    font-weight: 500; }
-  .CYQC-sell-info-wrap > ul > .CYQC-sell-Exclude-list {
-    color: #707070;
+    font-size: 16px;
+    line-height: 28px;
     font-weight: lighter; }
+  .CYQC-sell-info-wrap > ul > .CYQC-sell-Include-list {
+    color: #555555; }
+  .CYQC-sell-info-wrap > ul > .CYQC-sell-Exclude-list {
+    color: #707070; }
 
 /** COMMON TITLE */
 .CYQC-sell-title-position {
@@ -156,6 +156,22 @@ input {
   font-style: normal; }
 
 /** Tips */
+/** TRIP INTRO */
+.CYQC-trip-intro-container {
+  margin-bottom: 60px; }
+
+.CYQC-trip-photos-container img {
+  margin-bottom: 40px; }
+
+.CYQC-trip-desc-container {
+  padding: 0 40px; }
+  .CYQC-trip-desc-container .CYQC-desc {
+    line-height: 28px;
+    color: #707070;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: lighter; }
+
 /** COLOR */
 .CYQC-sell-title-wrap .CYQC-title-divider, .CYQC-title-divider, .CYQC-quick-nav-title-container > .CYQC-title-divider {
   margin: 0 5px;

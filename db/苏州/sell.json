@@ -6,20 +6,6 @@
         "w": 117,
         "h": 75
       }
-    },
-    "gradientBorderBackgroundTips": {
-      "url": "../assets/sell/gradient-border-backgroundB.png",
-      "size": {
-        "w": 194,
-        "h": 60
-      }
-    },
-    "gradientBorderBackgroundWarn": {
-      "url": "../assets/sell/gradient-border-background.png",
-      "size": {
-        "w": 194,
-        "h": 60
-      }
     }
   },
   "info": [
@@ -60,6 +46,11 @@
     "knowIt": {
       "en": "Know It",
       "cn": "预约须知",
+      "icon": {
+        "url": "../assets/sell/gradient-border-background.png",
+        "w": 222,
+        "h": 60
+      },
       "contents": [
         {
           "title": "预定时间:",
@@ -90,25 +81,16 @@
     "tips": {
       "en": "Tips",
       "cn": "温馨提示",
+      "icon": {
+        "url": "../assets/sell/gradient-border-backgroundB.png",
+        "w": 194,
+        "h": 60
+      },
       "contents": [
-        "为保证取票、入园顺利，预订时请务必填写真实姓名、手机号码等信息。",
-        "接站服务时间为8点-23点，请尽量按照此时间段到达；超过服务时间会收取延时接站服务费，请您知晓！",
-        "接站人员一般都会提前等候客人，请到达后保持手机畅通；接站为滚动接站，会接临近时间段的游客(间隔不超过30分钟)，请您谅解！"
-      ]
-    },
-    "checkIn": {
-      "en": "Hotel Check In",
-      "cn": "酒店入住",
-      "contents": [
-        "到达酒店后凭身份证到前台办理入住手续",
-        "入住需缴纳押金",
-        "退房时如无物品损坏或其它消费，押金将如数退还。",
-        "酒店入住时间一般为14点之后，如您抵达尚早，可将行李寄存在前台，在酒店周围逛逛。"
+        "因广州将进入冬季原因长隆水上乐园将于2018年11月1日开始闭园停止对外营业，还没有来得及感受水上激情的朋友们要等下一年啦。",
+        "欢乐世界内有部分项目不适合高血压、心脏病患者、脊椎背部疾病患者、孕妇、酒醉者游玩部分项目对参与游客的身高腰围、体重等没有要求限制，有上述病情或症状者，请自行确认并选择其他适合项目游玩。",
+        "为保证取票、入园顺利，预定时请填写清楚取票人真实姓名、手机信息。"
       ]
     }
-  },
-  "tripIntro": {
-    "en": "Trip Recommendations",
-    "cn": "推荐参观以下景点"
   }
 }
