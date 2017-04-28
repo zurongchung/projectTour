@@ -1,21 +1,21 @@
 {
   "assets": {
     "imgBackgroundTypeC": {
-      "url": "../assets/sell/img_background_3.png",
+      "url": "https://img.alicdn.com/imgextra/i3/830133302/TB2gFvQm88lpuFjSspaXXXJKpXa_!!830133302.png",
       "size": {
         "w": 117,
         "h": 75
       }
     },
     "gradientBorderBackgroundTips": {
-      "url": "../assets/sell/gradient-border-backgroundB.png",
+      "url": "https://img.alicdn.com/imgextra/i3/830133302/TB2vr42nrtlpuFjSspfXXXLUpXa_!!830133302.png",
       "size": {
         "w": 194,
         "h": 60
       }
     },
     "gradientBorderBackgroundWarn": {
-      "url": "../assets/sell/gradient-border-background.png",
+      "url": "https://img.alicdn.com/imgextra/i4/830133302/TB2ROG.m9hlpuFjSspkXXa1ApXa_!!830133302.png",
       "size": {
         "w": 194,
         "h": 60
@@ -38,7 +38,7 @@
         "旅游人身意外险30万"
       ],
       "icon": {
-        "url": "../assets/sell/marker.png",
+        "url": "https://img.alicdn.com/imgextra/i1/830133302/TB2Gy1nnrXlpuFjy1zbXXb_qpXa_!!830133302.png",
         "size": {
           "w": 65,
           "h": 73
@@ -47,7 +47,7 @@
     },
     {
       "en": "Exclude",
-      "cn": "包含",
+      "cn": "不含",
       "list": [
         "各地往返旅游城市的航班机票、机场建设费和燃油费、火车票、汽车票等交通费用。",
         "入住酒店按2人入住1间房核算，单人入住需补房差(费用以系统报价为准)",

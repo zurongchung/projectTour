@@ -11,14 +11,19 @@ $limit-small-width: 748px
   width: 197px
   height: 400px
 /** BERFORE ARE DEV ONLY */
+.title-cn, .title-en
+  font-size: 18px
+
 .#{$corpName}-warn-small,
 .#{$corpName}-warn
   font:
     weight: 200
 .#{$corpName}-warn-small
   margin: 5px 0
+  color: orange !important
   list-style: none
-  font-size: 14px !important
+  font:
+    size: 14px !important
   border-left: 2px solid orange
   padding-left: $gap
 .#{$corpName}-warn
@@ -29,7 +34,10 @@ $limit-small-width: 748px
   border-top: $divider-thick dashed orange
   border-bottom: $divider-thick dashed orange
   & > p
+    font:
+      size: 14px
     line-height: 28px
+    color: $text-gray
     margin-bottom: 5px
 .tmp-background
   width: 748px
@@ -85,7 +93,7 @@ $limit-small-width: 748px
     color: $text-dark
     letter-spacing: 2px
     font:
-      size: 18px
+      size: 16px
       weight: 500
 .#{$corpName}-sell-info-wrap
   width: 252px
@@ -94,7 +102,7 @@ $limit-small-width: 748px
     & > li
       letter-spacing: 2px
       margin-bottom: $gap
-      font-size: 16px
+      font-size: 14px
       line-height: 28px
       font-weight: lighter
     & > .#{$corpName}-sell-Include-list
@@ -114,7 +122,7 @@ $limit-small-width: 748px
   letter-spacing: 2px
 /** PARAGRAPH COMMON STYLE */
 .#{$corpName}-sell-notice-position
-  width: 100%
+  width: 95%
   height: auto
   padding: 0 40px
 .#{$corpName}-sell-notice-pragraph
@@ -147,8 +155,8 @@ $limit-small-width: 748px
   padding: 0 40px
   .#{$corpName}-desc
     line-height: 28px
-    color: $text-gray
+    color: $text-gray !important
     letter-spacing: 1px
     font:
-      size: 14px
+      size: 16px !important
       weight: lighter

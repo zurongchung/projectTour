@@ -3,7 +3,7 @@
   "h": 360,
   "scenes": [
     {
-      "url": "../test/day1.jpg",
+      "url": "https://img.alicdn.com/imgextra/i4/830133302/TB2Tmwop98mpuFjSZFMXXaxpVXa_!!830133302.jpg",
       "warn": [
         "博物馆开放时间:9:00—17:00（16:00停止入馆）周一闭馆(请注意参观时间)",
         "酒店距离博物馆约10公里",
@@ -16,8 +16,8 @@
     },
     {
       "url": [
-        "../test/day2.jpg",
-        "../test/name2.jpg"
+        "https://img.alicdn.com/imgextra/i4/830133302/TB2Tub4p5RnpuFjSZFCXXX2DXXa_!!830133302.jpg",
+        "https://img.alicdn.com/imgextra/i4/830133302/TB2Xzgep90mpuFjSZPiXXbssVXa_!!830133302.jpg"
       ],
       "desc": [
         "早上司导会根据和你约好的时间提前到达酒店接你前往自选景区，到达景区后凭短信中的二维码或预定下单人的身份证在景区售票出刷码/身份证即可入园。",

@@ -50,12 +50,16 @@ input {
   height: 400px; }
 
 /** BERFORE ARE DEV ONLY */
+.title-cn, .title-en {
+  font-size: 18px; }
+
 .CYQC-warn-small,
 .CYQC-warn {
   font-weight: 200; }
 
 .CYQC-warn-small {
   margin: 5px 0;
+  color: orange !important;
   list-style: none;
   font-size: 14px !important;
   border-left: 2px solid orange;
@@ -69,7 +73,9 @@ input {
   border-top: 1px dashed orange;
   border-bottom: 1px dashed orange; }
   .CYQC-warn > p {
+    font-size: 14px;
     line-height: 28px;
+    color: #707070;
     margin-bottom: 5px; }
 
 .tmp-background {
@@ -125,7 +131,7 @@ input {
   .CYQC-sell-title-wrap .CYQC-sell-title-text {
     color: #555555;
     letter-spacing: 2px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500; }
 
 .CYQC-sell-info-wrap {
@@ -134,7 +140,7 @@ input {
   .CYQC-sell-info-wrap > ul > li {
     letter-spacing: 2px;
     margin-bottom: 10px;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 28px;
     font-weight: lighter; }
   .CYQC-sell-info-wrap > ul > .CYQC-sell-Include-list {
@@ -157,7 +163,7 @@ input {
 
 /** PARAGRAPH COMMON STYLE */
 .CYQC-sell-notice-position {
-  width: 100%;
+  width: 95%;
   height: auto;
   padding: 0 40px; }
 
@@ -189,9 +195,9 @@ input {
   padding: 0 40px; }
   .CYQC-trip-desc-container .CYQC-desc {
     line-height: 28px;
-    color: #707070;
+    color: #707070 !important;
     letter-spacing: 1px;
-    font-size: 14px;
+    font-size: 16px !important;
     font-weight: lighter; }
 
 /** COLOR */
