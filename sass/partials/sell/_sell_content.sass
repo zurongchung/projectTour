@@ -13,7 +13,16 @@ $limit-small-width: 748px
 /** BERFORE ARE DEV ONLY */
 .title-cn, .title-en
   font-size: 18px
-
+.#{$corpName}-sub-title
+  font:
+    size: 16px
+    weight: 500
+  color: $text-dark
+  margin-bottom: $gap
+.#{$corpName}-contents
+  font:
+    size: 14px
+  line-height: 28px
 .#{$corpName}-warn-small,
 .#{$corpName}-warn
   font:
@@ -26,13 +35,21 @@ $limit-small-width: 748px
     size: 14px !important
   border-left: 2px solid orange
   padding-left: $gap
+.#{$corpName}-notice
+  list-style: none
+  color: orange !important
+.#{$corpName}-checkOut,
 .#{$corpName}-warn
-  padding: 0 40px
+  border-top: $divider-thick dashed orange
+  border-bottom: $divider-thick dashed orange
+  padding-top: $gap
+  padding-bottom: $gap
+.#{$corpName}-warn
+  padding-left: 40px
+  padding-right: 40px
   letter-spacing: 2px
   text-align: center
   margin-bottom: 40px
-  border-top: $divider-thick dashed orange
-  border-bottom: $divider-thick dashed orange
   & > p
     font:
       size: 14px
@@ -50,7 +67,7 @@ $limit-small-width: 748px
   border-right: $divider-thick solid $divider-color
   ul
     list-style: url('../assets/dot.png')
-    list-style-position: inside
+    list-style-position: outside
   & > div
     margin-bottom: $gap * 12
   & > .#{$corpName}-sell-header-container
@@ -79,6 +96,7 @@ $limit-small-width: 748px
   & > .#{$corpName}-sell-bundle-Exclude-container
     & > .#{$corpName}-sell-title-wrap
       margin-top: 40px
+      margin-bottom: 60px
 .#{$corpName}-sell-title-text-position
   position: relative
   top: -10px
@@ -96,12 +114,12 @@ $limit-small-width: 748px
       size: 16px
       weight: 500
 .#{$corpName}-sell-info-wrap
-  width: 252px
+  width: 286px
   height: auto
   & > ul
     & > li
       letter-spacing: 2px
-      margin-bottom: $gap
+      margin-bottom: $gap * 2
       font-size: 14px
       line-height: 28px
       font-weight: lighter
@@ -160,3 +178,22 @@ $limit-small-width: 748px
     font:
       size: 16px !important
       weight: lighter
+/** TRANSPORT */
+.#{$corpName}-sell-transport-contents-container
+  & > ul
+    list-style-position: outside
+    .#{$corpName}-contents
+      line-height: 28px
+      padding-left: 20px
+      font:
+        size: 16px
+        weight: lighter
+/** CHECK OUT */
+.#{$corpName}-checkOut
+  letter-spacing: 2px
+.#{$corpName}-check-out-time
+  margin-left: $gap
+  color: $text-gray
+  font:
+    size: 16px
+    weight: 100
