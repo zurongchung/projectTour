@@ -1,10 +1,11 @@
 -# coding: utf-8
 - includeLists = @sellDB["include"]
 - excludeLists = @sellDB["exclude"]
-- knowIt = @sellDB["notices"]["knowIt"]
-- tips = @sellDB["notices"]["tips"]
-- checkIn = @sellDB["notices"]["checkIn"]
+- knowIt = @sellDB["knowIt"]
+- tips = @sellDB["tips"]
+- checkIn = @sellDB["checkIn"]
 - tripIntro = @sellDB["tripIntro"]
+- sceneView = @scenes
 - graphics = @sellDB["assets"]
 - imgBackgroundTypeC = @sellDB["assets"]["imgBackgroundTypeC"]
 - gradientBorderBackgroundTips = @sellDB["assets"]["gradientBorderBackgroundTips"]
@@ -30,11 +31,18 @@
             - includeLists["list"].each_with_index do |section, index|
               %li{class: "#{@corpName}sell-Include-list"}
                 %p{class: "#{@corpName}sub-title"}= section["title"]
+                - if index == 0
+                  - if section.has_key?("must") && !section["must"].empty?
+                    %span{class: "#{@corpName}bundle-scene-option"}必选:
+                    - section["must"].each do |item|
+                      %p{class: "#{@corpName}contents"}= item
+                  %span{class: "#{@corpName}bundle-scene-option"}自选:
                 - section["contents"].each do |item|
-                  - warn = ""
-                  - if /^tips/.match(item)
-                    - warn = "#{@corpName}warn-small"
-                  %p{class: "#{@corpName}contents #{warn}"}= item
+                  - if item.instance_of?(Array)
+                    - item.each do |list|
+                      %p{class: "#{@corpName}contents #{@corpName}warn-small"}= list
+                  - else
+                    %p{class: "#{@corpName}contents"}= item
       %div{class: "#{@corpName}sell-bundle-Exclude-container"}
         %div{class: "#{@corpName}sell-title-wrap"}
           %div
@@ -91,15 +99,26 @@
             - checkIn["contents"].each_with_index do |data, index|
               %li{class: "#{@corpName}sell-notice-pragraph"}
                 = data
-          - if @sellDB["notices"].has_key?("checkOut") && @sellDB["notices"]["checkOut"].length > 0
-            - checkOut = @sellDB["notices"]["checkOut"]
+          - if @sellDB.has_key?("checkOut") && @sellDB["checkOut"].length > 0
+            - checkOut = @sellDB["checkOut"]
             %div{class: "#{@corpName}checkOut"}
               %p{class: "#{@corpName}sub-title"}
                 = checkOut["cn"]
                 %span{class: "#{@corpName}check-out-time"}= checkOut["time"]
               - checkOut["contents"].each do |info|
                 %p{class: "#{@corpName}contents"}= info
-    %div{id: "#{@corpName}trip", class: "#{@corpName}sell-scene-intro-container"}
+    %div{id: "#{@corpName}sceneView", class: "#{@corpName}scene-view-container"}
+      %div{class: "#{@corpName}sell-notice-scene-view-title-container"}
+        %img{class: "#{@corpName}sell-scene-view-title-background", src: gradientBorderBackgroundTips["url"], width: gradientBorderBackgroundTips["size"]["w"], height: gradientBorderBackgroundTips["size"]["h"]}
+        %div{class: "#{@corpName}sell-title-position"}
+          %span{class: "#{@corpName}sell-title title-en"}= sceneView["en"]
+          %i{class: "#{@corpName}title-divider"}
+          %span{class: "#{@corpName}sell-title title-cn"}= sceneView["cn"]
+        %div{class: "#{@corpName}scenes-photos-container"}
+          - sceneView["scenes"].each do |photo|
+            %p{class: "#{@corpName}scene-name"}= photo["name"]
+            %img{class: "#{@corpName}scene-photo", src: photo["url"], width: sceneView["w"], height: sceneView["h"]}
+    -#%div{id: "#{@corpName}trip", class: "#{@corpName}sell-scene-intro-container"}
       %div{class: "#{@corpName}sell-notice-hotel-scene-intro-title-container"}
         %img{class: "#{@corpName}sell-scene-intro-title-background", src: gradientBorderBackgroundTips["url"], width: gradientBorderBackgroundTips["size"]["w"], height: gradientBorderBackgroundTips["size"]["h"]}
         %div{class: "#{@corpName}sell-title-position"}

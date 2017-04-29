@@ -182,6 +182,12 @@ input {
   color: #555555;
   letter-spacing: 2px; }
 
+/** BUNDLE */
+.CYQC-bundle-scene-option {
+  color: #b7b7b7;
+  font-size: 14px;
+  font-weight: 500; }
+
 /** PARAGRAPH COMMON STYLE */
 .CYQC-sell-notice-position {
   width: 95%;
@@ -239,6 +245,17 @@ input {
   color: #707070;
   font-size: 16px;
   font-weight: 100; }
+
+/** SCENES PHOTO */
+.CYQC-scene-name {
+  color: #707070;
+  text-align: center;
+  margin: 40px;
+  border: 1px solid #ebebeb;
+  height: 32px;
+  line-height: 32px;
+  font-size: 16px;
+  font-weight: 500; }
 
 /** COLOR */
 .CYQC-sell-title-wrap .CYQC-title-divider, .CYQC-title-divider, .CYQC-quick-nav-title-container > .CYQC-title-divider {

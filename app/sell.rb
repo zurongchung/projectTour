@@ -6,6 +6,7 @@ _OUT = ROOT + 'release/html/sell.html'
 DB_SELL = ROOT + 'db/sell/sell.json'
 DB_QUICK_NAV = ROOT + 'db/sell/quickNav.json'
 DB_CAROUSEL = ROOT + 'db/sell/verList.json'
+DB_SCENES = ROOT + 'db/sell/scenePreview.json'
 class Sell < HTML
   attr_accessor :sellDataDB
   def initialize(_i, _o)
@@ -15,6 +16,7 @@ class Sell < HTML
     #@carouselElement = ROOT + "haml/sell/carouselA.html.haml"
     @carouselElement = ROOT + "haml/sell/scene-intro.html.haml"
     @sellDB = JSON.parse(readData(DB_SELL))
+    @scenes = JSON.parse(readData(DB_SCENES))
     @quickNav = JSON.parse(readData(DB_QUICK_NAV))
     @carouselContents = JSON.parse(readData(DB_CAROUSEL))
   end

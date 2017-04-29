@@ -1,0 +1,24 @@
+{
+  "w": 746,
+  "h": 450,
+  "en": "Scenes",
+  "cn": "景点预览",
+  "scenes": [
+    {
+      "name": "正阳街",
+      "url": "../test/day1.jpg"
+    },
+    {
+      "name": "两江四湖",
+      "url": "../test/day2.jpg"
+    },
+    {
+      "name": "独秀峰",
+      "url": "../test/name2.jpg"
+    },
+    {
+      "name": "西山公园",
+      "url": "../test/4.jpg"
+    }
+  ]
+}
