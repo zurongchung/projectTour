@@ -55,7 +55,7 @@
               %li{class: "#{@corpName}sell-Exclude-list"}= item
     - if @sellDB.has_key?("getTickets") && @sellDB["getTickets"].length > 0
       - getTickets = @sellDB["getTickets"]
-      %div{id: "#{@corpName}transport", class: "#{@corpName}sell-container"}
+      %div{id: "#{@corpName}tickets", class: "#{@corpName}sell-container"}
         %div{class: "#{@corpName}sell-container"}
           %img{class: "#{@corpName}sell-title-background", src: gradientBorderBackgroundTips["url"], width: gradientBorderBackgroundTips["size"]["w"], height: gradientBorderBackgroundTips["size"]["h"]}
           %div{class: "#{@corpName}sell-title-position"}
@@ -63,50 +63,58 @@
             %i{class: "#{@corpName}title-divider"}
             %span{class: "#{@corpName}sell-title title-cn"}= getTickets["cn"]
           %div{class: "#{@corpName}sell-notice-position"}
-            %div{class: "#{@corpName}sell-notice-hotel-check-in-contents-container"}
+            %div{class: "#{@corpName}sell-notice-get-tickets-contents-container"}
               %ul
-                - getTickets["contents"].each_with_index do |data, index|
+                - getTickets["tickets"].each_with_index do |data, index|
                   %li{class: "#{@corpName}sell-notice-pragraph"}
-                    = data
-    %div{id: "#{@corpName}getTickets", class: "#{@corpName}sell-banner-container"}
+                    %p{class: "#{@corpName}sub-title"}= data["name"]
+                    %p{class: "#{@corpName}contents #{@corpName}get-tickets-price"}
+                      %span{class: "#{@corpName}sub-title"} 票价：
+                      = data["price"]
+              %div{class: "#{@corpName}scene-notice"}
+                - getTickets["extras"].each do |words|
+                  %p{class: "#{@corpName}contents"}= words
+    %div{id: "#{@corpName}banner", class: "#{@corpName}sell-banner-container"}
       -#%img{class: "#{@corpName}sell-banner-background-image"}
       %div{class: "tmp-background"}
-    %div{id: "#{@corpName}tips", class: "#{@corpName}sell-tips-container"}
-      %div{class: "#{@corpName}sell-notice-tips-title-container"}
-        %img{class: "#{@corpName}sell-tips-title-background", src: gradientBorderBackgroundTips["url"], width: gradientBorderBackgroundTips["size"]["w"], height: gradientBorderBackgroundTips["size"]["h"]}
-        %div{class: "#{@corpName}sell-title-position"}
-          %span{class: "#{@corpName}sell-title title-en"}= tips["en"]
-          %i{class: "#{@corpName}title-divider"}
-          %span{class: "#{@corpName}sell-title title-cn"}= tips["cn"]
-      %div{class: "#{@corpName}sell-notice-position"}
-        %div{class: "#{@corpName}sell-notice-tips-contents-container"}
-          %ul
-            - tips["contents"].each_with_index do |data, index|
-              - important = ""
-              - important = "#{@corpName}notice" if /^Notice/.match(data)
-              %li{class: "#{@corpName}sell-notice-pragraph #{important}"}
-                = data
-    %div{id: "#{@corpName}checkIn", class: "#{@corpName}sell-hotel-check-in-container"}
-      %div{class: "#{@corpName}sell-notice-hotel-check-in-title-container"}
-        %img{class: "#{@corpName}sell-hotel-check-in-title-background", src: gradientBorderBackgroundTips["url"], width: gradientBorderBackgroundTips["size"]["w"], height: gradientBorderBackgroundTips["size"]["h"]}
-        %div{class: "#{@corpName}sell-title-position"}
-          %span{class: "#{@corpName}sell-title title-en"}= checkIn["en"]
-          %i{class: "#{@corpName}title-divider"}
-          %span{class: "#{@corpName}sell-title title-cn"}= checkIn["cn"]
-      %div{class: "#{@corpName}sell-notice-position"}
-        %div{class: "#{@corpName}sell-notice-hotel-check-in-contents-container"}
-          %ul
-            - checkIn["contents"].each_with_index do |data, index|
-              %li{class: "#{@corpName}sell-notice-pragraph"}
-                = data
-          - if @sellDB.has_key?("checkOut") && @sellDB["checkOut"].length > 0
-            - checkOut = @sellDB["checkOut"]
-            %div{class: "#{@corpName}checkOut"}
-              %p{class: "#{@corpName}sub-title"}
-                = checkOut["cn"]
-                %span{class: "#{@corpName}check-out-time"}= checkOut["time"]
-              - checkOut["contents"].each do |info|
-                %p{class: "#{@corpName}contents"}= info
+    - if @sellDB.has_key?("tips") && @sellDB["tips"].length > 0
+      %div{id: "#{@corpName}tips", class: "#{@corpName}sell-tips-container"}
+        %div{class: "#{@corpName}sell-notice-tips-title-container"}
+          %img{class: "#{@corpName}sell-tips-title-background", src: gradientBorderBackgroundTips["url"], width: gradientBorderBackgroundTips["size"]["w"], height: gradientBorderBackgroundTips["size"]["h"]}
+          %div{class: "#{@corpName}sell-title-position"}
+            %span{class: "#{@corpName}sell-title title-en"}= tips["en"]
+            %i{class: "#{@corpName}title-divider"}
+            %span{class: "#{@corpName}sell-title title-cn"}= tips["cn"]
+        %div{class: "#{@corpName}sell-notice-position"}
+          %div{class: "#{@corpName}sell-notice-tips-contents-container"}
+            %ul
+              - tips["contents"].each_with_index do |data, index|
+                - important = ""
+                - important = "#{@corpName}notice" if /^\*{2,}/.match(data)
+                %li{class: "#{@corpName}sell-notice-pragraph #{important}"}
+                  = data
+    - if @sellDB.has_key?("checkIn") && @sellDB["checkIn"].length > 0
+      %div{id: "#{@corpName}checkIn", class: "#{@corpName}sell-hotel-check-in-container"}
+        %div{class: "#{@corpName}sell-notice-hotel-check-in-title-container"}
+          %img{class: "#{@corpName}sell-hotel-check-in-title-background", src: gradientBorderBackgroundTips["url"], width: gradientBorderBackgroundTips["size"]["w"], height: gradientBorderBackgroundTips["size"]["h"]}
+          %div{class: "#{@corpName}sell-title-position"}
+            %span{class: "#{@corpName}sell-title title-en"}= checkIn["en"]
+            %i{class: "#{@corpName}title-divider"}
+            %span{class: "#{@corpName}sell-title title-cn"}= checkIn["cn"]
+        %div{class: "#{@corpName}sell-notice-position"}
+          %div{class: "#{@corpName}sell-notice-hotel-check-in-contents-container"}
+            %ul
+              - checkIn["contents"].each_with_index do |data, index|
+                %li{class: "#{@corpName}sell-notice-pragraph"}
+                  = data
+            - if @sellDB.has_key?("checkOut") && @sellDB["checkOut"].length > 0
+              - checkOut = @sellDB["checkOut"]
+              %div{class: "#{@corpName}checkOut"}
+                %p{class: "#{@corpName}sub-title"}
+                  = checkOut["cn"]
+                  %span{class: "#{@corpName}check-out-time"}= checkOut["time"]
+                - checkOut["contents"].each do |info|
+                  %p{class: "#{@corpName}contents"}= info
     %div{id: "#{@corpName}sceneView", class: "#{@corpName}scene-view-container"}
       %div{class: "#{@corpName}sell-notice-scene-view-title-container"}
         %img{class: "#{@corpName}sell-scene-view-title-background", src: gradientBorderBackgroundTips["url"], width: gradientBorderBackgroundTips["size"]["w"], height: gradientBorderBackgroundTips["size"]["h"]}
@@ -118,6 +126,10 @@
           - sceneView["scenes"].each do |photo|
             %p{class: "#{@corpName}scene-name"}= photo["name"]
             %img{class: "#{@corpName}scene-photo", src: photo["url"], width: sceneView["w"], height: sceneView["h"]}
+            - if photo.has_key?("notice") && !photo["notice"].empty?
+              %div{class: "#{@corpName}scene-notice"}
+                - photo["notice"].each do |words|
+                  %p{class: "#{@corpName}contents"}= words
     -#%div{id: "#{@corpName}trip", class: "#{@corpName}sell-scene-intro-container"}
       %div{class: "#{@corpName}sell-notice-hotel-scene-intro-title-container"}
         %img{class: "#{@corpName}sell-scene-intro-title-background", src: gradientBorderBackgroundTips["url"], width: gradientBorderBackgroundTips["size"]["w"], height: gradientBorderBackgroundTips["size"]["h"]}
@@ -143,16 +155,17 @@
                     %p{class: "#{@corpName}sub-title"}= data["stop"]
                     - data["info"].each do |info|
                       %p{class: "#{@corpName}contents"}= info
-    %div{id: "#{@corpName}knowIt", class: "#{@corpName}sell-notice-know-it-container"}
-      %div{class: "#{@corpName}sell-notice-know-it-title-container"}
-        %img{class: "#{@corpName}sell-know-it-title-background", src: gradientBorderBackgroundWarn["url"], width: gradientBorderBackgroundWarn["size"]["w"], height: gradientBorderBackgroundWarn["size"]["h"]}
-        %div{class: "#{@corpName}sell-title-position"}
-          %span{class: "#{@corpName}sell-title title-en"}= knowIt["en"]
-          %i{class: "#{@corpName}title-divider"}
-          %span{class: "#{@corpName}sell-title title-cn"}= knowIt["cn"]
-      %div{class: "#{@corpName}sell-notice-position"}
-        %div{class: "#{@corpName}sell-notice-know-it-contents-container"}
-          - knowIt["contents"].each_with_index do |data, index|
-            %p{class: "#{@corpName}sell-notice-pragraph"}
-              %em{class: "#{@corpName}sell-notice-sub-title"}= data["title"]
-              = data["content"]
+    - if @sellDB.has_key?("knowIt") && @sellDB["knowIt"].length > 0
+      %div{id: "#{@corpName}knowIt", class: "#{@corpName}sell-notice-know-it-container"}
+        %div{class: "#{@corpName}sell-notice-know-it-title-container"}
+          %img{class: "#{@corpName}sell-know-it-title-background", src: gradientBorderBackgroundWarn["url"], width: gradientBorderBackgroundWarn["size"]["w"], height: gradientBorderBackgroundWarn["size"]["h"]}
+          %div{class: "#{@corpName}sell-title-position"}
+            %span{class: "#{@corpName}sell-title title-en"}= knowIt["en"]
+            %i{class: "#{@corpName}title-divider"}
+            %span{class: "#{@corpName}sell-title title-cn"}= knowIt["cn"]
+        %div{class: "#{@corpName}sell-notice-position"}
+          %div{class: "#{@corpName}sell-notice-know-it-contents-container"}
+            - knowIt["contents"].each_with_index do |data, index|
+              %p{class: "#{@corpName}sell-notice-pragraph"}
+                %em{class: "#{@corpName}sell-notice-sub-title"}= data["title"]
+                = data["content"]

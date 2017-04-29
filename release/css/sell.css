@@ -80,11 +80,22 @@ input {
   color: orange !important; }
 
 .CYQC-checkOut,
-.CYQC-warn {
+.CYQC-warn,
+.CYQC-notice,
+.CYQC-scene-notice {
   border-top: 1px dashed orange;
   border-bottom: 1px dashed orange;
   padding-top: 10px;
   padding-bottom: 10px; }
+
+.CYQC-scene-notice {
+  margin: 10px 0; }
+  .CYQC-scene-notice > .CYQC-contents {
+    text-align: center;
+    color: #555555;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: lighter; }
 
 .CYQC-warn {
   padding-left: 40px;
@@ -245,6 +256,10 @@ input {
   color: #707070;
   font-size: 16px;
   font-weight: 100; }
+
+/** GET TICKETS */
+.CYQC-get-tickets-price {
+  padding-left: 20px; }
 
 /** SCENES PHOTO */
 .CYQC-scene-name {

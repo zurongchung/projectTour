@@ -39,11 +39,23 @@ $limit-small-width: 748px
   list-style: none
   color: orange !important
 .#{$corpName}-checkOut,
-.#{$corpName}-warn
+.#{$corpName}-warn,
+.#{$corpName}-notice,
+.#{$corpName}-scene-notice
   border-top: $divider-thick dashed orange
   border-bottom: $divider-thick dashed orange
   padding-top: $gap
   padding-bottom: $gap
+.#{$corpName}-scene-notice
+  margin: $gap 0
+  & > .#{$corpName}-contents
+    text-align: center
+    color: $text-dark
+    letter-spacing: 1px
+    font:
+      size: 14px
+      weight: lighter
+
 .#{$corpName}-warn
   padding-left: 40px
   padding-right: 40px
@@ -203,6 +215,9 @@ $limit-small-width: 748px
   font:
     size: 16px
     weight: 100
+/** GET TICKETS */
+.#{$corpName}-get-tickets-price
+  padding-left: 20px
 /** SCENES PHOTO */
 .#{$corpName}-scene-name
   color: $text-gray
