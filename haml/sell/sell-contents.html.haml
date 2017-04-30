@@ -64,16 +64,20 @@
             %span{class: "#{@corpName}sell-title title-cn"}= getTickets["cn"]
           %div{class: "#{@corpName}sell-notice-position"}
             %div{class: "#{@corpName}sell-notice-get-tickets-contents-container"}
-              %ul
-                - getTickets["tickets"].each_with_index do |data, index|
-                  %li{class: "#{@corpName}sell-notice-pragraph"}
-                    %p{class: "#{@corpName}sub-title"}= data["name"]
-                    %p{class: "#{@corpName}contents #{@corpName}get-tickets-price"}
-                      %span{class: "#{@corpName}sub-title"} 票价：
-                      = data["price"]
-              %div{class: "#{@corpName}scene-notice"}
-                - getTickets["extras"].each do |words|
-                  %p{class: "#{@corpName}contents"}= words
+              - if getTickets.has_key?("types") && getTickets["types"].length > 0
+                - types = getTickets["types"]
+                - types.each_with_index do |data, index|
+                  %ul
+                    - if data.has_key?("contents") && !data["contents"].empty?
+                      - data["contents"].each_with_index do |item, index|
+                        %li{class: "#{@corpName}sell-notice-pragraph"}
+                          %p{class: "#{@corpName}sub-title"}= item["name"]
+                          %p{class: "#{@corpName}contents #{@corpName}get-tickets-price"}
+                            %span{class: "#{@corpName}sub-title"} 票价：
+                            = item["price"]
+                  %div{class: "#{@corpName}scene-notice"}
+                    - data["extras"].each do |words|
+                      %p{class: "#{@corpName}contents"}= words
     %div{id: "#{@corpName}banner", class: "#{@corpName}sell-banner-container"}
       -#%img{class: "#{@corpName}sell-banner-background-image"}
       %div{class: "tmp-background"}
