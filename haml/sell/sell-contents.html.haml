@@ -31,7 +31,7 @@
             - includeLists["list"].each_with_index do |section, index|
               %li{class: "#{@corpName}sell-Include-list"}
                 %p{class: "#{@corpName}sub-title"}= section["title"]
-                - if index == 0
+                - if section.has_key?("sp") && section["sp"] == "scene"
                   - if section.has_key?("must") && !section["must"].empty?
                     %span{class: "#{@corpName}bundle-scene-option"}必选:
                     - section["must"].each do |item|
@@ -78,7 +78,7 @@
                   %div{class: "#{@corpName}scene-notice"}
                     - data["extras"].each do |words|
                       %p{class: "#{@corpName}contents"}= words
-    %div{id: "#{@corpName}banner", class: "#{@corpName}sell-banner-container"}
+    -#%div{id: "#{@corpName}banner", class: "#{@corpName}sell-banner-container"}
       -#%img{class: "#{@corpName}sell-banner-background-image"}
       %div{class: "tmp-background"}
     - if @sellDB.has_key?("tips") && @sellDB["tips"].length > 0
