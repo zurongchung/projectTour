@@ -281,6 +281,22 @@ header {
   height: 100%;
   display: inline-block;
   vertical-align: top; }
+  .CYQC-footer-trip-suggestion > .CYQC-footer-thumbnail-contents-container {
+    height: 84.5px; }
+    .CYQC-footer-trip-suggestion > .CYQC-footer-thumbnail-contents-container.thumbnail-top-container {
+      margin-bottom: 5px; }
+      .CYQC-footer-trip-suggestion > .CYQC-footer-thumbnail-contents-container.thumbnail-top-container > .CYQC-footer-suggestion-thumbnail-container:nth-child(1) {
+        margin-right: 5px; }
+    .CYQC-footer-trip-suggestion > .CYQC-footer-thumbnail-contents-container > .CYQC-footer-suggestion-thumbnail-container {
+      display: inline-block;
+      height: 84.5px; }
+      .CYQC-footer-trip-suggestion > .CYQC-footer-thumbnail-contents-container > .CYQC-footer-suggestion-thumbnail-container > a {
+        text-align: center;
+        line-height: 84.5px;
+        height: 84.5px;
+        display: block;
+        position: relative;
+        top: -88.5px; }
   .CYQC-footer-trip-suggestion > .CYQC-footer-suggestion-position {
     width: 80%;
     height: 100%; }

@@ -1,49 +1,59 @@
 {
   "lists": [
     {
-      "name": "巴厘岛",
-      "url": "#",
-      "thumbnail": {
-        "url": "#",
-        "w": 0,
-        "h": 0
-      }
+      "pos": "top",
+      "contents": [
+        {
+          "name": "巴厘岛",
+          "url": "#",
+          "thumbnail": {
+            "url": "#",
+            "w": 80,
+            "h": 84.5
+          }
+        },
+        {
+          "name": "亚马逊丛林",
+          "url": "#",
+          "thumbnail": {
+            "url": "#",
+            "w": 213.5,
+            "h": 84.5
+          }
+        }
+      ]
     },
     {
-      "name": "亚马逊丛林",
-      "url": "#",
-      "thumbnail": {
-        "url": "#",
-        "w": 0,
-        "h": 0
-      }
-    },
-    {
-      "name": "丽江",
-      "url": "#",
-      "thumbnail": {
-        "url": "#",
-        "w": 0,
-        "h": 0
-      }
-    },
-    {
-      "name": "夏威夷",
-      "url": "#",
-      "thumbnail": {
-        "url": "#",
-        "w": 0,
-        "h": 0
-      }
-    },
-    {
-      "name": "桂林",
-      "url": "#",
-      "thumbnail": {
-        "url": "#",
-        "w": 0,
-        "h": 0
-      }
+      "pos": "bottom",
+      "contents": [
+        {
+          "name": "丽江",
+          "url": "#",
+          "thumbnail": {
+            "url": "#",
+            "w": 55,
+            "h": 84.5
+          }
+        },
+        {
+          "name": "夏威夷",
+          "url": "#",
+          "thumbnail": {
+            "url": "#",
+            "w": 170.5,
+            "h": 84.5
+          }
+        },
+        {
+          "name": "桂林",
+          "url": "#",
+          "thumbnail": {
+            "url": "#",
+            "w": 55,
+            "h": 84.5
+          }
+        }
+      ]
     }
   ]
 }

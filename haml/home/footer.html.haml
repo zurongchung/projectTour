@@ -3,9 +3,17 @@
   %section{class: "#{@corpName}footer-trip-suggestion"}
     - if @footerSuggestion.has_key?("lists") && !@footerSuggestion["lists"].empty?
       - @footerSuggestion["lists"].each_with_index do |item, index|
-        %div{class: "#{@corpName}footer-suggestion-thumbnail-container"}
-          %img{class: "#{@corpName}footer-suggestion-thumbnail", src: item["thumbnail"]["url"], width: item["thumbnail"]["w"], height: item["thumbnail"]["h"]}
-          %a{class: "#{@corpName}footer-suggestion-thumbnail-name", href: item["url"], target: "_blank"}= item["name"]
+        - thumbnailContainer = ""
+        - if item.has_key?("pos") && item["pos"] == "top"
+          - thumbnailContainer = "thumbnail-top-container"
+        - elsif item.has_key?("pos") && item["pos"] == "bottom"
+          - thumbnailContainer = "thumbnail-bottom-container"
+        %div{class: "#{@corpName}footer-thumbnail-contents-container #{thumbnailContainer}"}
+          - if item.has_key?("contents") && !item["contents"].empty?
+            - item["contents"].each_with_index do |thumbnailInfo, index|
+              %div{class: "#{@corpName}footer-suggestion-thumbnail-container"}
+                %img{class: "#{@corpName}footer-suggestion-thumbnail", src: thumbnailInfo["thumbnail"]["url"], width: thumbnailInfo["thumbnail"]["w"], height: thumbnailInfo["thumbnail"]["h"]}
+                %a{class: "#{@corpName}footer-suggestion-thumbnail-name", href: thumbnailInfo["url"], target: "_blank"}= thumbnailInfo["name"]
   - if @suggestions.has_key?("suggestions") && !@suggestions["suggestions"].empty?
     - @suggestions["suggestions"].each_with_index do |suggestionHash, index|
       - suggestsClass = "#{@corpName}city-suggestion" if index == 0
