@@ -15,7 +15,8 @@ body {
   font-family: "Source Han Serif CN"; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #555555; }
 
 h3 {
   margin: 0; }
@@ -290,7 +291,8 @@ body {
   font-family: "Source Han Serif CN"; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #555555; }
 
 h3 {
   margin: 0; }

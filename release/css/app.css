@@ -15,7 +15,8 @@ body {
   font-family: "Source Han Serif CN"; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #555555; }
 
 h3 {
   margin: 0; }
@@ -336,8 +337,7 @@ header {
 .CYQC-form-container .CYQC-search-icon,
 .CYQC-form-container #CYQC-submit-btn {
   display: inline-block;
-  cursor: pointer;
-  opacity: 0.5; }
+  cursor: pointer; }
 .CYQC-form-container #CYQC-submit-btn {
   /** search icon size */
   display: none; }
@@ -354,7 +354,6 @@ header {
     .CYQC-search-keywords-top-container > .CYQC-search-keywords-position.keywords-on-bottom {
       width: 350px; }
     .CYQC-search-keywords-top-container > .CYQC-search-keywords-position > .CYQC-search-keywords {
-      cursor: pointer;
       display: inline-block;
       margin: 0 5px;
       color: #f0f0f0; }

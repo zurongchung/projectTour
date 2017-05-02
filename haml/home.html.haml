@@ -57,14 +57,14 @@
                   - elsif item.has_key?("pos") && item["pos"] == "bottom"
                     - keywordPos = "keywords-on-bottom"
                   %div{class: "#{@corpName}search-keywords-position #{keywordPos}"}
-                    - searchKeywords.each_with_index do |word, index|
+                    - searchKeywords.each_with_index do |obj, index|
                       - hot = false
                       - if item.has_key?("pos") && item["pos"] == "top"
                         - hot = true if index == 1
                       - elsif item.has_key?("pos") && item["pos"] == "bottom"
                         - hot = true if index == 2
                       - focus = "focus-word" if hot
-                      %span{class: "#{@corpName}search-keywords #{focus}"}= word
+                      %a{class: "#{@corpName}search-keywords #{focus}", href: obj["url"], target: "_blank"}= obj["key"]
       - else
         %div{id: "#{@corpName}product-intro-title-container"}
           %div{class: "#{@corpName}product-intro-title-top"}

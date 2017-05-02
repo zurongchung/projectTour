@@ -1,16 +1,23 @@
 %div{id: "#{@corpName}footer"}
+  -# Left side photo suggestions
   %section{class: "#{@corpName}footer-trip-suggestion"}
-  - @suggestions["suggestions"].each_with_index do |suggestionHash, index|
-    - suggestsClass = "#{@corpName}city-suggestion" if index == 0
-    - suggestsClass = "#{@corpName}scene-suggestion" if index == 1
-    %section{class: "#{suggestsClass} #{@corpName}footer-trip-suggestion #{@corpName}footer-nav"}
-      %div{class: "#{@corpName}footer-suggestion-position"}
-        %div{class: "#{@corpName}suggestion-title-container"}
-          %span{class: "#{@corpName}suggeststion-title title-en"}= suggestionHash["title"]["en"]
-          %i{class: "#{@corpName}title-divider"}
-          %span{class: "#{@corpName}suggeststion-title title-cn"}= suggestionHash["title"]["cn"]
-        %div{class: "#{@corpName}suggestions-list-container"}
-          - suggestionHash["list"].each_with_index do |item, index|
-            -# list split by comma(,) or whitespace(\s)
-            %a{class: "#{@corpName}suggestions-text-link", href: "#{item["url"]}", target: "_self"}= item["name"]
-            -#%span{class: "#{@corpName}suggestions-text"}
+    - if @footerSuggestion.has_key?("lists") && !@footerSuggestion["lists"].empty?
+      - @footerSuggestion["lists"].each_with_index do |item, index|
+        %div{class: "#{@corpName}footer-suggestion-thumbnail-container"}
+          %img{class: "#{@corpName}footer-suggestion-thumbnail", src: item["thumbnail"]["url"], width: item["thumbnail"]["w"], height: item["thumbnail"]["h"]}
+          %a{class: "#{@corpName}footer-suggestion-thumbnail-name", href: item["url"], target: "_blank"}= item["name"]
+  - if @suggestions.has_key?("suggestions") && !@suggestions["suggestions"].empty?
+    - @suggestions["suggestions"].each_with_index do |suggestionHash, index|
+      - suggestsClass = "#{@corpName}city-suggestion" if index == 0
+      - suggestsClass = "#{@corpName}scene-suggestion" if index == 1
+      %section{class: "#{suggestsClass} #{@corpName}footer-trip-suggestion #{@corpName}footer-nav"}
+        %div{class: "#{@corpName}footer-suggestion-position"}
+          %div{class: "#{@corpName}suggestion-title-container"}
+            %span{class: "#{@corpName}suggeststion-title title-en"}= suggestionHash["title"]["en"]
+            %i{class: "#{@corpName}title-divider"}
+            %span{class: "#{@corpName}suggeststion-title title-cn"}= suggestionHash["title"]["cn"]
+          %div{class: "#{@corpName}suggestions-list-container"}
+            - suggestionHash["list"].each_with_index do |item, index|
+              -# list split by comma(,) or whitespace(\s)
+              %a{class: "#{@corpName}suggestions-text-link", href: "#{item["url"]}", target: "_self"}= item["name"]
+              -#%span{class: "#{@corpName}suggestions-text"}
