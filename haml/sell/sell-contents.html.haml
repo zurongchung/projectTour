@@ -1,11 +1,6 @@
 -# coding: utf-8
 - includeLists = @sellDB["include"]
 - excludeLists = @sellDB["exclude"]
-- knowIt = @sellDB["knowIt"]
-- tips = @sellDB["tips"]
-- checkIn = @sellDB["checkIn"]
-- tripIntro = @sellDB["tripIntro"]
-- sceneView = @scenes
 - graphics = @sellDB["assets"]
 - imgBackgroundTypeC = @sellDB["assets"]["imgBackgroundTypeC"]
 - gradientBorderBackgroundTips = @sellDB["assets"]["gradientBorderBackgroundTips"]
@@ -82,6 +77,7 @@
       -#%img{class: "#{@corpName}sell-banner-background-image"}
       %div{class: "tmp-background"}
     - if @sellDB.has_key?("tips") && @sellDB["tips"].length > 0
+      - tips = @sellDB["tips"]
       %div{id: "#{@corpName}tips", class: "#{@corpName}sell-tips-container"}
         %div{class: "#{@corpName}sell-notice-tips-title-container"}
           %img{class: "#{@corpName}sell-tips-title-background", src: gradientBorderBackgroundTips["url"], width: gradientBorderBackgroundTips["size"]["w"], height: gradientBorderBackgroundTips["size"]["h"]}
@@ -98,6 +94,7 @@
                 %li{class: "#{@corpName}sell-notice-pragraph #{important}"}
                   = data
     - if @sellDB.has_key?("checkIn") && @sellDB["checkIn"].length > 0
+      - checkIn = @sellDB["checkIn"]
       %div{id: "#{@corpName}checkIn", class: "#{@corpName}sell-hotel-check-in-container"}
         %div{class: "#{@corpName}sell-notice-hotel-check-in-title-container"}
           %img{class: "#{@corpName}sell-hotel-check-in-title-background", src: gradientBorderBackgroundTips["url"], width: gradientBorderBackgroundTips["size"]["w"], height: gradientBorderBackgroundTips["size"]["h"]}
@@ -119,29 +116,32 @@
                   %span{class: "#{@corpName}check-out-time"}= checkOut["time"]
                 - checkOut["contents"].each do |info|
                   %p{class: "#{@corpName}contents"}= info
-    %div{id: "#{@corpName}sceneView", class: "#{@corpName}scene-view-container"}
-      %div{class: "#{@corpName}sell-notice-scene-view-title-container"}
-        %img{class: "#{@corpName}sell-scene-view-title-background", src: gradientBorderBackgroundTips["url"], width: gradientBorderBackgroundTips["size"]["w"], height: gradientBorderBackgroundTips["size"]["h"]}
-        %div{class: "#{@corpName}sell-title-position"}
-          %span{class: "#{@corpName}sell-title title-en"}= sceneView["en"]
-          %i{class: "#{@corpName}title-divider"}
-          %span{class: "#{@corpName}sell-title title-cn"}= sceneView["cn"]
-        %div{class: "#{@corpName}scenes-photos-container"}
-          - sceneView["scenes"].each do |photo|
-            %p{class: "#{@corpName}scene-name"}= photo["name"]
-            %img{class: "#{@corpName}scene-photo", src: photo["url"], width: sceneView["w"], height: sceneView["h"]}
-            - if photo.has_key?("notice") && !photo["notice"].empty?
-              %div{class: "#{@corpName}scene-notice"}
-                - photo["notice"].each do |words|
-                  %p{class: "#{@corpName}contents"}= words
-    -#%div{id: "#{@corpName}trip", class: "#{@corpName}sell-scene-intro-container"}
-      %div{class: "#{@corpName}sell-notice-hotel-scene-intro-title-container"}
-        %img{class: "#{@corpName}sell-scene-intro-title-background", src: gradientBorderBackgroundTips["url"], width: gradientBorderBackgroundTips["size"]["w"], height: gradientBorderBackgroundTips["size"]["h"]}
-        %div{class: "#{@corpName}sell-title-position"}
-          %span{class: "#{@corpName}sell-title title-en"}= tripIntro["en"]
-          %i{class: "#{@corpName}title-divider"}
-          %span{class: "#{@corpName}sell-title title-cn"}= tripIntro["cn"]
-      = add_fragment @carouselElement
+    - if @scenes.has_key?("scenes") && !@scenes["scenes"].empty?
+      %div{id: "#{@corpName}sceneView", class: "#{@corpName}scene-view-container"}
+        %div{class: "#{@corpName}sell-notice-scene-view-title-container"}
+          %img{class: "#{@corpName}sell-scene-view-title-background", src: gradientBorderBackgroundTips["url"], width: gradientBorderBackgroundTips["size"]["w"], height: gradientBorderBackgroundTips["size"]["h"]}
+          %div{class: "#{@corpName}sell-title-position"}
+            %span{class: "#{@corpName}sell-title title-en"}= @scenes["en"]
+            %i{class: "#{@corpName}title-divider"}
+            %span{class: "#{@corpName}sell-title title-cn"}= @scenes["cn"]
+          %div{class: "#{@corpName}scenes-photos-container"}
+            - @scenes["scenes"].each do |photo|
+              %p{class: "#{@corpName}scene-name"}= photo["name"]
+              %img{class: "#{@corpName}scene-photo", src: photo["url"], width: @scenes["w"], height: @scenes["h"]}
+              - if photo.has_key?("notice") && !photo["notice"].empty?
+                %div{class: "#{@corpName}scene-notice"}
+                  - photo["notice"].each do |words|
+                    %p{class: "#{@corpName}contents"}= words
+    -#if @sellDB.has_key?("tripIntro") && !@sellDB["tripIntro"].empty?
+      - tripIntro = @sellDB["tripIntro"]
+        %div{id: "#{@corpName}trip", class: "#{@corpName}sell-scene-intro-container"}
+          %div{class: "#{@corpName}sell-notice-hotel-scene-intro-title-container"}
+            %img{class: "#{@corpName}sell-scene-intro-title-background", src: gradientBorderBackgroundTips["url"], width: gradientBorderBackgroundTips["size"]["w"], height: gradientBorderBackgroundTips["size"]["h"]}
+            %div{class: "#{@corpName}sell-title-position"}
+              %span{class: "#{@corpName}sell-title title-en"}= tripIntro["en"]
+              %i{class: "#{@corpName}title-divider"}
+              %span{class: "#{@corpName}sell-title title-cn"}= tripIntro["cn"]
+          = add_fragment @carouselElement
     - if @sellDB.has_key?("transport") && @sellDB["transport"].length > 0
       - transport = @sellDB["transport"]
       %div{id: "#{@corpName}transport", class: "#{@corpName}sell-container"}
@@ -160,6 +160,7 @@
                     - data["info"].each do |info|
                       %p{class: "#{@corpName}contents"}= info
     - if @sellDB.has_key?("knowIt") && @sellDB["knowIt"].length > 0
+      - knowIt = @sellDB["knowIt"]
       %div{id: "#{@corpName}knowIt", class: "#{@corpName}sell-notice-know-it-container"}
         %div{class: "#{@corpName}sell-notice-know-it-title-container"}
           %img{class: "#{@corpName}sell-know-it-title-background", src: gradientBorderBackgroundWarn["url"], width: gradientBorderBackgroundWarn["size"]["w"], height: gradientBorderBackgroundWarn["size"]["h"]}

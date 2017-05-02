@@ -245,6 +245,7 @@
   },
   "tripIntro": {
     "en": "Trip Recommendations",
-    "cn": "推荐参观以下景点"
+    "cn": "推荐参观以下景点",
+    "contents": []
   }
 }
