@@ -15,7 +15,7 @@
       %ul
         - @data["nav"]["rootMenu"].each_with_index do |item, index|
           %li{class: "#{@corpName}g-nav-menu #{@corpName}g-nav-menu-item-#{index}"}
-            = item
+            %a{class: "#{@corpName}g-nav-menu-item-link", href: item["url"], target: "_blank"}= item["name"]
 %div{id: "#{@corpName}main-contents-container"}
   - 3.times do |index|
     %section{class: "#{@corpName}splash #{@corpName}splash-#{index}"}
