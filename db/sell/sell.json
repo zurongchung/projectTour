@@ -86,7 +86,28 @@
       "(以上船班时间仅供参考，具体时间以景区当天公布的为准）"
     ]
   },
-  "getTickets": {},
+  "getTickets": {
+    "en": "Get Tickets",
+    "cn": "获取不在套餐内的景点门票",
+    "types": [
+      {
+        "type": "digital",
+        "contents": [
+          {
+            "name": "景点",
+            "price": 120
+          }
+        ],
+        "extras": []
+      },
+      {
+        "type": "paper",
+        "contents": [
+        ],
+        "extras": []
+      }
+    ]
+  },
   "transport": {
     "en": "Transport",
     "cn": "乘车信息",

@@ -47,7 +47,7 @@
           %ul
             - excludeLists["list"].each_with_index do |item, index|
               %li{class: "#{@corpName}sell-Exclude-list"}= item
-    - if @sellDB.has_key?("getTickets") && @sellDB["getTickets"].length > 0
+    - if @sellDB.has_key?("getTickets") && @sellDB["getTickets"].length > 0 && !@sellDB["getTickets"]["types"][0]["contents"].empty?
       - getTickets = @sellDB["getTickets"]
       %div{id: "#{@corpName}tickets", class: "#{@corpName}sell-container"}
         %div{class: "#{@corpName}sell-container"}
@@ -58,20 +58,22 @@
             %span{class: "#{@corpName}sell-title title-cn"}= getTickets["cn"]
           %div{class: "#{@corpName}sell-notice-position"}
             %div{class: "#{@corpName}sell-notice-get-tickets-contents-container"}
-              - if getTickets.has_key?("types") && getTickets["types"].length > 0
+              - if getTickets.has_key?("types") && !getTickets["types"].empty?
                 - types = getTickets["types"]
                 - types.each_with_index do |data, index|
-                  %ul
-                    - if data.has_key?("contents") && !data["contents"].empty?
+                  - if data.has_key?("contents") && !data["contents"].empty?
+                    %ul
                       - data["contents"].each_with_index do |item, index|
                         %li{class: "#{@corpName}sell-notice-pragraph"}
                           %p{class: "#{@corpName}sub-title"}= item["name"]
                           %p{class: "#{@corpName}contents #{@corpName}get-tickets-price"}
                             %span{class: "#{@corpName}sub-title"} 票价：
                             = item["price"]
-                  %div{class: "#{@corpName}scene-notice"}
-                    - data["extras"].each do |words|
-                      %p{class: "#{@corpName}contents"}= words
+                  - if data.has_key?("contents") && !data["contents"].empty?
+                    - if data.has_key?("extras") && !data["extras"].empty?
+                      %div{class: "#{@corpName}scene-notice"}
+                        - data["extras"].each do |words|
+                          %p{class: "#{@corpName}contents"}= words
     -#%div{id: "#{@corpName}banner", class: "#{@corpName}sell-banner-container"}
       -#%img{class: "#{@corpName}sell-banner-background-image"}
       %div{class: "tmp-background"}
