@@ -1,10 +1,9 @@
 -# coding: utf-8
 - includeLists = @sellDB["include"]
 - excludeLists = @sellDB["exclude"]
-- graphics = @sellDB["assets"]
-- imgBackgroundTypeC = @sellDB["assets"]["imgBackgroundTypeC"]
-- gradientBorderBackgroundTips = @sellDB["assets"]["gradientBorderBackgroundTips"]
-- gradientBorderBackgroundWarn = @sellDB["assets"]["gradientBorderBackgroundWarn"]
+- imgBackgroundTypeC = @graphics["assets"]["imgBackgroundTypeC"]
+- gradientBorderBackgroundTips = @graphics["assets"]["gradientBorderBackgroundTips"]
+- gradientBorderBackgroundWarn = @graphics["assets"]["gradientBorderBackgroundWarn"]
 %div{class: "#{@corpName}sell-outter-wrap"}
   %div{class: "#{@corpName}sell-aside-container"}
     = add_fragment @quickNavContents
