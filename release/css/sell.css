@@ -95,6 +95,7 @@ input {
     text-align: center;
     color: #555555;
     letter-spacing: 1px;
+    padding: 0 40px;
     font-size: 14px;
     font-weight: lighter; }
 
@@ -213,6 +214,10 @@ input {
   letter-spacing: 2px;
   font-size: 16px;
   font-weight: 100; }
+  .CYQC-sell-notice-pragraph > .CYQC-important-notice {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-letter-spacing: 1px; }
 
 /** KNOW IT */
 .CYQC-sell-notice-know-it-container .CYQC-sell-notice-know-it-contents-container > .CYQC-sell-notice-pragraph > .CYQC-sell-notice-sub-title {
@@ -273,6 +278,9 @@ input {
   line-height: 32px;
   font-size: 16px;
   font-weight: 500; }
+
+.CYQC-scene-photo {
+  margin-bottom: 10px; }
 
 /** COLOR */
 .CYQC-sell-title-wrap .CYQC-title-divider, .CYQC-title-divider, .CYQC-quick-nav-title-container > .CYQC-title-divider {

@@ -90,9 +90,13 @@
             %ul
               - tips["contents"].each_with_index do |data, index|
                 - important = ""
-                - important = "#{@corpName}notice" if /^\*{2,}/.match(data)
+                - important = "#{@corpName}notice" if data.instance_of?(Hash) && data["**"].length > 0
                 %li{class: "#{@corpName}sell-notice-pragraph #{important}"}
-                  = data
+                  - if data.instance_of?(Hash) && data["**"].length > 0
+                    - data["**"].each do |sentence|
+                      %p{class: "#{@corpName}important-notice"}= sentence
+                  -else
+                    = data
     - if @sellDB.has_key?("checkIn") && @sellDB["checkIn"].length > 0
       - checkIn = @sellDB["checkIn"]
       %div{id: "#{@corpName}checkIn", class: "#{@corpName}sell-hotel-check-in-container"}
@@ -127,7 +131,9 @@
           %div{class: "#{@corpName}scenes-photos-container"}
             - @scenes["scenes"].each do |photo|
               %p{class: "#{@corpName}scene-name"}= photo["name"]
-              %img{class: "#{@corpName}scene-photo", src: photo["url"], width: @scenes["w"], height: @scenes["h"]}
+              - if photo.has_key?("url") && !photo["url"].empty?
+                - photo["url"].each_with_index do |url, index|
+                  %img{class: "#{@corpName}scene-photo", src: url, width: @scenes["w"], height: @scenes["h"]}
               - if photo.has_key?("notice") && !photo["notice"].empty?
                 %div{class: "#{@corpName}scene-notice"}
                   - photo["notice"].each do |words|
