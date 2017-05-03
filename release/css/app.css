@@ -285,8 +285,6 @@ header {
     height: 84.5px; }
     .CYQC-footer-trip-suggestion > .CYQC-footer-thumbnail-contents-container.thumbnail-top-container {
       margin-bottom: 5px; }
-      .CYQC-footer-trip-suggestion > .CYQC-footer-thumbnail-contents-container.thumbnail-top-container > .CYQC-footer-suggestion-thumbnail-container:nth-child(1) {
-        margin-right: 5px; }
     .CYQC-footer-trip-suggestion > .CYQC-footer-thumbnail-contents-container > .CYQC-footer-suggestion-thumbnail-container {
       display: inline-block;
       height: 84.5px; }
@@ -296,7 +294,10 @@ header {
         height: 84.5px;
         display: block;
         position: relative;
-        top: -88.5px; }
+        top: -88.5px;
+        color: white;
+        font-size: 16px;
+        font-weight: lighter; }
   .CYQC-footer-trip-suggestion > .CYQC-footer-suggestion-position {
     width: 80%;
     height: 100%; }
@@ -315,6 +316,8 @@ header {
       padding-left: 10px;
       height: 100%; }
       .CYQC-footer-trip-suggestion > .CYQC-footer-suggestion-position > .CYQC-suggestions-list-container > .CYQC-suggestions-text-link {
+        font-size: 16px;
+        font-weight: lighter;
         display: inline-block;
         color: #707070;
         min-width: 50px;

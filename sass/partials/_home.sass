@@ -100,8 +100,6 @@ $menu-height: 30px
   position: relative
   top: 12px
 /** SEARCH */
-.#{$corpName}-search-box-container
-
 .#{$corpName}-img-text
   /** background image's size*/
   display: block
@@ -255,7 +253,7 @@ $intro-box-space: 40px
       margin-bottom: 5px
       & > .#{$corpName}-footer-suggestion-thumbnail-container
         &:nth-child(1)
-          margin-right: 5px
+        //  margin-right: 5px
     & > .#{$corpName}-footer-suggestion-thumbnail-container
       display: inline-block
       height: 84.5px
@@ -266,6 +264,10 @@ $intro-box-space: 40px
         display: block
         position: relative
         top: -88.5px
+        color: white
+        font:
+          size: 16px
+          weight: lighter
 
   & > .#{$corpName}-footer-suggestion-position
     width: 80%
@@ -287,6 +289,9 @@ $intro-box-space: 40px
       padding-left: $gap
       height: 100%
       & > .#{$corpName}-suggestions-text-link
+        font:
+          size: 16px
+          weight: lighter
         display: inline-block
         color: $text-gray
         min-width: 50px

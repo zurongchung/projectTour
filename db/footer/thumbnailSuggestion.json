@@ -7,7 +7,7 @@
           "name": "巴厘岛",
           "url": "#",
           "thumbnail": {
-            "url": "#",
+            "url": "../assets/home/1.png",
             "w": 80,
             "h": 84.5
           }
@@ -16,8 +16,8 @@
           "name": "亚马逊丛林",
           "url": "#",
           "thumbnail": {
-            "url": "#",
-            "w": 213.5,
+            "url": "../assets/home/2.png",
+            "w": 225,
             "h": 84.5
           }
         }
@@ -30,7 +30,7 @@
           "name": "丽江",
           "url": "#",
           "thumbnail": {
-            "url": "#",
+            "url": "../assets/home/3.png",
             "w": 55,
             "h": 84.5
           }
@@ -39,8 +39,8 @@
           "name": "夏威夷",
           "url": "#",
           "thumbnail": {
-            "url": "#",
-            "w": 170.5,
+            "url": "../assets/home/4.png",
+            "w": 190,
             "h": 84.5
           }
         },
@@ -48,7 +48,7 @@
           "name": "桂林",
           "url": "#",
           "thumbnail": {
-            "url": "#",
+            "url": "../assets/home/3.png",
             "w": 55,
             "h": 84.5
           }
