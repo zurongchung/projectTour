@@ -146,6 +146,9 @@ header {
   margin-bottom: 20px;
   margin-left: 70px; }
 
+.CYQC-search-box-container {
+  height: 220px; }
+
 #CYQC-search-title-container {
   width: auto;
   height: auto;
@@ -365,7 +368,7 @@ header {
 
 .CYQC-search-keywords-top-container {
   position: relative;
-  top: -200px;
+  top: -190px;
   left: 0; }
   .CYQC-search-keywords-top-container > .CYQC-search-keywords-position {
     margin: 0 auto; }
