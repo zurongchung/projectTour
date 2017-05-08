@@ -1,5 +1,5 @@
 /** COLOR */
-.CYQC-sell-title-wrap .CYQC-title-divider, .CYQC-title-divider, .CYQC-quick-nav-title-container > .CYQC-title-divider {
+.CYQC-info-text-content > .CYQC-info-title-divider, .CYQC-sell-title-wrap .CYQC-title-divider, .CYQC-title-divider, .CYQC-quick-nav-title-container > .CYQC-title-divider {
   margin: 0 5px;
   display: inline-block;
   width: 1px;
@@ -37,6 +37,47 @@ button {
 input {
   padding: 0;
   border: none; }
+
+/** 950 container */
+#CYQC-main-contents-container {
+  width: 950px;
+  height: auto;
+  margin: 0 auto; }
+
+/** suggestion link style */
+.CYQC-suggestion-title-container {
+  margin-bottom: 10px;
+  padding-left: 10px; }
+
+.CYQC-suggeststion-title {
+  color: #555555;
+  letter-spacing: 2px;
+  font-size: 18px;
+  font-weight: 500; }
+
+.CYQC-suggestions-text-link {
+  font-size: 16px;
+  font-weight: lighter;
+  display: inline-block;
+  color: #707070;
+  min-width: 50px;
+  margin-right: 10px;
+  height: 35px;
+  line-height: 35px; }
+
+/** TITLE STYLE */
+.CYQC-info-text-content {
+  margin-bottom: 20px; }
+  .CYQC-info-text-content > .CYQC-info-title-divider {
+    height: 28px; }
+
+.CYQC-info-emphasis {
+  font-style: normal;
+  font-size: 24px;
+  font-weight: 500;
+  color: #555555; }
+  .CYQC-info-emphasis.title-cn {
+    letter-spacing: 2px; }
 
 .CYQC-sell-outter-wrap {
   width: 950px;
@@ -283,7 +324,7 @@ input {
   margin-bottom: 10px; }
 
 /** COLOR */
-.CYQC-sell-title-wrap .CYQC-title-divider, .CYQC-title-divider, .CYQC-quick-nav-title-container > .CYQC-title-divider {
+.CYQC-info-text-content > .CYQC-info-title-divider, .CYQC-sell-title-wrap .CYQC-title-divider, .CYQC-title-divider, .CYQC-quick-nav-title-container > .CYQC-title-divider {
   margin: 0 5px;
   display: inline-block;
   width: 1px;
@@ -321,6 +362,47 @@ button {
 input {
   padding: 0;
   border: none; }
+
+/** 950 container */
+#CYQC-main-contents-container {
+  width: 950px;
+  height: auto;
+  margin: 0 auto; }
+
+/** suggestion link style */
+.CYQC-suggestion-title-container {
+  margin-bottom: 10px;
+  padding-left: 10px; }
+
+.CYQC-suggeststion-title {
+  color: #555555;
+  letter-spacing: 2px;
+  font-size: 18px;
+  font-weight: 500; }
+
+.CYQC-suggestions-text-link {
+  font-size: 16px;
+  font-weight: lighter;
+  display: inline-block;
+  color: #707070;
+  min-width: 50px;
+  margin-right: 10px;
+  height: 35px;
+  line-height: 35px; }
+
+/** TITLE STYLE */
+.CYQC-info-text-content {
+  margin-bottom: 20px; }
+  .CYQC-info-text-content > .CYQC-info-title-divider {
+    height: 28px; }
+
+.CYQC-info-emphasis {
+  font-style: normal;
+  font-size: 24px;
+  font-weight: 500;
+  color: #555555; }
+  .CYQC-info-emphasis.title-cn {
+    letter-spacing: 2px; }
 
 .CYQC-sell-aside-container {
   height: 320px; }

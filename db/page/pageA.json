@@ -1,0 +1,47 @@
+{
+  "assets": {
+    "arrow": {
+        "right": {
+          "url": "../assets/ArrowRight.png",
+          "w": 8,
+          "h": 8
+        }
+    }
+  },
+  "breadCrumb": [
+    {
+      "name": "首页",
+      "link": "#"
+    },
+    {
+      "name": "自由行",
+      "link": "#"
+    }
+  ],
+  "update": {
+    "en": "Recent Update",
+    "cn": "新增景点路线",
+    "contents": [
+      {
+        "name": "A",
+        "price": 12,
+        "link": "#",
+        "cover": {
+          "url": "#",
+          "w": 12,
+          "h": 12
+        }
+      },
+      {
+        "name": "B",
+        "price": 12,
+        "link": "#",
+        "cover": {
+          "url": "#",
+          "w": 12,
+          "h": 12
+        }
+      }
+    ]
+  }
+}

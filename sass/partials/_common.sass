@@ -26,3 +26,42 @@ button
 input
   padding: 0
   border: none
+/** 950 container */
+##{$corpName}-main-contents-container
+  width: $limit-width
+  height: auto
+  margin: 0 auto
+/** suggestion link style */
+.#{$corpName}-suggestion-title-container
+  margin-bottom: $gap
+  padding-left: $gap
+.#{$corpName}-suggeststion-title
+  color: $text-dark
+  letter-spacing: 2px
+  font:
+    size: 18px
+    weight: 500
+.#{$corpName}-suggestions-text-link
+  font:
+    size: 16px
+    weight: lighter
+  display: inline-block
+  color: $text-gray
+  min-width: 50px
+  margin-right: $gap
+  height: 35px
+  line-height: 35px
+/** TITLE STYLE */
+.#{$corpName}-info-text-content
+  margin-bottom: $gap * 2
+  & > .#{$corpName}-info-title-divider
+    @extend %title-divider
+    height: 28px
+.#{$corpName}-info-emphasis
+  font:
+    style: normal
+    size: 24px
+    weight: 500
+  color: $text-dark
+  &.title-cn
+    letter-spacing: 2px
