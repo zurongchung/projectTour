@@ -105,13 +105,19 @@ input {
 .CYQC-quick-links-container {
   width: 650px;
   min-height: 120px;
-  margin-bottom: 40px;
-  border-bottom: 1px solid #ebebeb; }
-  .CYQC-quick-links-container .CYQC-quick-links-group > .CYQC-suggestions-text-link {
-    text-align: center; }
+  margin-bottom: 40px; }
+  .CYQC-quick-links-container .CYQC-quick-links-group {
+    padding-bottom: 40px;
+    border-bottom: 1px solid #ebebeb; }
+    .CYQC-quick-links-container .CYQC-quick-links-group > .CYQC-suggestions-text-link {
+      text-align: center; }
 
 .CYQC-bordered-title-container {
   padding-bottom: 20px;
   border-bottom: 1px solid #ebebeb; }
+
+/** QUICK LINKS OF POPULAR SCENES */
+.CYQC-quick-hot-scenes-container {
+  height: 220px; }
 
 /*# sourceMappingURL=product.css.map */

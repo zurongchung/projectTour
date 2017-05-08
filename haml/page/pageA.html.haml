@@ -1,14 +1,13 @@
 -# coding: utf-8
 %div{id: "#{@corpName}main-contents-container"}
-  - if @selfTourData.has_key?("breadCrumb") && !@selfTourData["breadCrumb"].empty?
-    %div{class: "#{@corpName}page-path"}
-      - @selfTourData["breadCrumb"].each_with_index do |item, index|
-        - currentPage = "#{@corpName}current-page" if index == (@selfTourData["breadCrumb"].length - 1)
-        %a{class: "#{@corpName}page-path-link #{currentPage}", target: "_blank", href: item["link"]}= item["name"]
-        - if index % 2 == 0
-          - if @selfTourData.has_key?("assets") && @selfTourData["assets"].has_key?("arrow") && !@selfTourData["assets"]["arrow"].empty?
-            - arrow = @selfTourData["assets"]["arrow"]
-            %img{class: "#{@corpName}bread-crumb-icon", width: arrow["right"]["w"], height: arrow["right"]["h"], src: arrow["right"]["url"]}
+  %div{class: "#{@corpName}page-path"}
+    - @selfTourData["breadCrumb"].each_with_index do |item, index|
+      - currentPage = "#{@corpName}current-page" if index == (@selfTourData["breadCrumb"].length - 1)
+      %a{class: "#{@corpName}page-path-link #{currentPage}", target: "_blank", href: item["link"]}= item["name"]
+      - if index % 2 == 0
+        - if @selfTourData.has_key?("assets") && @selfTourData["assets"].has_key?("arrow") && !@selfTourData["assets"]["arrow"].empty?
+          - arrow = @selfTourData["assets"]["arrow"]
+          %img{class: "#{@corpName}bread-crumb-icon", width: arrow["right"]["w"], height: arrow["right"]["h"], src: arrow["right"]["url"]}
   - if @selfTourLinksData.has_key?("contents") && !@selfTourLinksData["contents"].empty?
     %div{class: "#{@corpName}quick-links-container"}
       %div{class: "#{@corpName}quick-links-wrap"}
@@ -21,6 +20,8 @@
               - status = "#{@corpName}hot" if item["status"] == "hot"
               - status = "#{@corpName}fav" if item["status"] == "fav"
             %a{class: "#{@corpName}suggestions-text-link #{status}", href: "#{item["url"]}", target: "_self"}= item["name"]
+        %div{class: "#{@corpName}quick-hot-scenes-container"}
+          -# add quick links of popular scenes
   - if @selfTourData.has_key?("update") && !@selfTourData["update"].empty?
     - data = @selfTourData["update"]
     %div{class: "#{@corpName}info-text-content #{@corpName}info-title-container #{@corpName}bordered-title-container"}
