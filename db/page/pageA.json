@@ -43,5 +43,29 @@
         }
       }
     ]
-  }
+  },
+  "products": [
+    {
+      "en": "NewYork",
+      "cn": "纽约",
+      "w": 310,
+      "h": 500,
+      "contents": [
+        {
+          "title": "三亚",
+          "price": 321,
+          "cover": {
+            "url": "#"
+          }
+        },
+        {
+          "title": "西双版纳",
+          "price": 321,
+          "cover": {
+            "url": "#"
+          }
+        }
+      ]
+    }
+  ]
 }

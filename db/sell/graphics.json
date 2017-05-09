@@ -1,21 +1,21 @@
 {
   "assets": {
     "imgBackgroundTypeC": {
-      "url": "https://img.alicdn.com/imgextra/i3/830133302/TB2gFvQm88lpuFjSspaXXXJKpXa_!!830133302.png",
+      "url": "../assets/sell/img_background_3.png",
       "size": {
         "w": 117,
         "h": 75
       }
     },
     "gradientBorderBackgroundTips": {
-      "url": "https://img.alicdn.com/imgextra/i3/830133302/TB2vr42nrtlpuFjSspfXXXLUpXa_!!830133302.png",
+      "url": "../assets/sell/gradient-border-backgroundB.png",
       "size": {
         "w": 194,
         "h": 60
       }
     },
     "gradientBorderBackgroundWarn": {
-      "url": "https://img.alicdn.com/imgextra/i4/830133302/TB2ROG.m9hlpuFjSspkXXa1ApXa_!!830133302.png",
+      "url": "../assets/sell/gradient-border-background.png",
       "size": {
         "w": 194,
         "h": 60

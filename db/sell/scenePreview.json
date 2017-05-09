@@ -7,21 +7,21 @@
     {
       "name": "中山路步行街",
       "url": [
-        "../test/day1.jpg"
+        "../test/1.jpg"
       ],
       "notice": []
     },
     {
       "name": "厦门西提咖啡一条街",
       "url": [
-        "../test/4.jpg"
+        "../test/2.jpg"
       ],
       "notice": []
     },
     {
       "name": "鼓浪屿",
       "url": [
-        "../test/4.jpg",
+        "../test/3.jpg",
         "../test/4.jpg"
       ],
       "notice": [
@@ -31,7 +31,7 @@
     {
       "name": "南普陀寺",
       "url": [
-        "../test/4.jpg"
+        "../test/5.jpg"
       ],
       "notice": [
       ]
@@ -39,7 +39,7 @@
     {
       "name": "厦门大学",
       "url": [
-        "../test/4.jpg"
+        "../test/6.jpg"
       ],
       "notice": [
       ]
@@ -47,7 +47,7 @@
     {
       "name": "环岛路",
       "url": [
-        "../test/4.jpg"
+        "../test/7.jpg"
       ],
       "notice": [
       ]
@@ -55,7 +55,7 @@
     {
       "name": "环岛木栈道",
       "url": [
-        "../test/4.jpg"
+        "../test/8.jpg"
       ],
       "notice": [
       ]
@@ -63,7 +63,7 @@
     {
       "name": "曾厝垵",
       "url": [
-        "../test/4.jpg"
+        "../test/9.jpg"
       ],
       "notice": [
         "以上景点全部免费开放，无需门票。租自行车大约10元/小时（可以砍价的哦）"

@@ -29,3 +29,17 @@
       %i{class: "#{@corpName}info-title-divider"}
       %em{class: "#{@corpName}info-title, #{@corpName}info-emphasis title-cn"}= data["cn"]
     %div{class: "#{@corpName}recent-update-container"}
+  - if @selfTourData.has_key?("products") && !@selfTourData["products"].empty?
+    - @selfTourData["products"].each_with_index do |section, index|
+      %div{class: "#{@corpName}product-container"}
+        %div{class: "#{@corpName}info-text-content #{@corpName}info-title-container #{@corpName}bordered-title-container"}
+          %em{class: "#{@corpName}info-title, #{@corpName}info-emphasis title-en"}= section["en"]
+          %i{class: "#{@corpName}info-title-divider"}
+          %em{class: "#{@corpName}info-title, #{@corpName}info-emphasis title-cn"}= section["cn"]
+        - if section.has_key?("contents") && !section["contents"].empty?
+          - product = section["contents"]
+          %div{class: "#{@corpName}product-info-container"}
+            - product.each_with_index do |item, index|
+              %div{class: "#{@corpName}product-card-container"}
+                %div{class: "#{@corpName}product-card-cover-container"}
+                  %img{class: "#{@corpName}product-cover", width: section["w"], height: section["h"], src: item["cover"]["url"]}
