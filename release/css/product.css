@@ -125,4 +125,13 @@ input {
   width: 100%;
   height: 420px; }
 
+/** PRODUCTS */
+.CYQC-product-card-container {
+  display: inline-block;
+  width: 310px;
+  height: 500px;
+  background: #4a979c; }
+  .CYQC-product-card-container:nth-child(even) {
+    margin: 0 10px; }
+
 /*# sourceMappingURL=product.css.map */

@@ -23,20 +23,21 @@
         %div{class: "#{@corpName}sell-info-wrap"}
           %ul
             - includeLists["list"].each_with_index do |section, index|
-              %li{class: "#{@corpName}sell-Include-list"}
-                %p{class: "#{@corpName}sub-title"}= section["title"]
-                - if section.has_key?("sp") && section["sp"] == "scene"
-                  - if section.has_key?("must") && !section["must"].empty?
-                    %span{class: "#{@corpName}bundle-scene-option"}必选:
-                    - section["must"].each do |item|
+              - if section.has_key?("contents") && !section["contents"].empty?
+                %li{class: "#{@corpName}sell-Include-list"}
+                  %p{class: "#{@corpName}sub-title"}= section["title"]
+                  - if section.has_key?("sp") && section["sp"] == "scene"
+                    - if section.has_key?("must") && !section["must"].empty?
+                      %span{class: "#{@corpName}bundle-scene-option"}必选:
+                      - section["must"].each do |item|
+                        %p{class: "#{@corpName}contents"}= item
+                    %span{class: "#{@corpName}bundle-scene-option"}自选:
+                  - section["contents"].each do |item|
+                    - if item.instance_of?(Array)
+                      - item.each do |list|
+                        %p{class: "#{@corpName}contents #{@corpName}warn-small"}= list
+                    - else
                       %p{class: "#{@corpName}contents"}= item
-                  %span{class: "#{@corpName}bundle-scene-option"}自选:
-                - section["contents"].each do |item|
-                  - if item.instance_of?(Array)
-                    - item.each do |list|
-                      %p{class: "#{@corpName}contents #{@corpName}warn-small"}= list
-                  - else
-                    %p{class: "#{@corpName}contents"}= item
       %div{class: "#{@corpName}sell-bundle-Exclude-container"}
         %div{class: "#{@corpName}sell-title-wrap"}
           %div
@@ -77,7 +78,7 @@
     -#%div{id: "#{@corpName}banner", class: "#{@corpName}sell-banner-container"}
       -#%img{class: "#{@corpName}sell-banner-background-image"}
       %div{class: "tmp-background"}
-    - if @sellDB.has_key?("tips") && @sellDB["tips"].length > 0
+    - if @sellDB.has_key?("tips") && @sellDB["tips"].length > 0 && !@sellDB["tips"]["contents"].empty?
       - tips = @sellDB["tips"]
       %div{id: "#{@corpName}tips", class: "#{@corpName}sell-tips-container"}
         %div{class: "#{@corpName}sell-notice-tips-title-container"}
