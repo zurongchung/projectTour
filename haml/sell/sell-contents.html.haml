@@ -114,7 +114,7 @@
               - checkIn["contents"].each_with_index do |data, index|
                 %li{class: "#{@corpName}sell-notice-pragraph"}
                   = data
-            - if @sellDB.has_key?("checkOut") && @sellDB["checkOut"].length > 0
+            - if @sellDB.has_key?("checkOut") && @sellDB["checkOut"].length > 0 && !@sellDB["checkOut"]["contents"].empty?
               - checkOut = @sellDB["checkOut"]
               %div{class: "#{@corpName}checkOut"}
                 %p{class: "#{@corpName}sub-title"}
